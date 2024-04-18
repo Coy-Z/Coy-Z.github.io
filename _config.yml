@@ -27,7 +27,7 @@ url: "https://Coy-Z.github.io" # the base hostname & protocol for your site, e.g
 github_username:  Coy-Z
 
 # Build settings
-theme: minimal
+theme: minima
 plugins:
   - jekyll-feed
 
