@@ -6,3 +6,8 @@ layout: home
 ---
 
 # Coy Zhu
+
+I am an undergraduate student at Trinity College, University of Cambridge, currently studying Engineering.
+I have interests in information theory and coding theory, in particular channel encoding and signals processing.
+
+
