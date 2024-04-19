@@ -14,6 +14,6 @@ I have interests in information theory and coding theory, in particular channel 
 
 ## CV
 
-<embed src="https://Coy-Z.github.io/_files/CV_Coy.pdf" width="500" height="375" type="application/pdf">
+<embed src="https://Coy-Z.github.io/CV_Coy.pdf" width="500" height="375" type="application/pdf">
 
 <iframe src="https://Coy-Z.github.io/_files/CV_Coy.pdf" style="width:718px; height:700px;" frameborder="0"></iframe>
