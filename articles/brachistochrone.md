@@ -6,7 +6,7 @@ permalink: /articles/brachistochrone/
 
 # Brachistochrone Problem
 
-The problem objective is to find the shape of a slope connecting two points, such that a ball rolling down the slope (from the higher to lower point) would do so in the shortest time. The gif attached below illustrates this concept, using three curves: the path of shortest distance, the path of highest maximum acceleration and the brachistochrone.
+The problem objective is to find the shape of a slope connecting two points, such that a ball rolling down the slope (from the higher to lower point) would do so in the shortest time. The gif (taken from <a href="https://nilabhasaha.wordpress.com/2019/02/24/a-tour-through-some-curves-part-1-the-brachistochrone-problem/">nilabhasaha.wordpress.com</a>) attached below illustrates this concept, using three curves: the path of shortest distance, the path of highest maximum acceleration and the brachistochrone.
 
 <img src="/files/brachistochrone.gif" alt="" width="400" height="200"/>
 
@@ -48,3 +48,13 @@ $$\mathrm{d}s = \sqrt{1 + y'^2}\mathrm{d}x.$$
 This gives us the final formula for $T$,
 
 $$T(y) = \int \frac{\sqrt{1 + y^2}}{\sqrt{-2gy}}\mathrm{d}x.$$
+
+## Functional Differentiation
+
+What we really wish to aquire is $\nabla _y T$ and set it equal to 0 for the minimum $T$. To do this, we utilise a concept from matrix calculus,
+
+$$\mathrm{d}f = \nabla f(x) \cdot \mathrm{d}x.$$
+
+and we generalise the inner/dot product to the Hilbert space of functions. We define the inner product of $u,v \in \mathcal{V}$ to be,
+
+$$\langle u,v \rangle = \int uv \mathrm{d}x.$$
