@@ -67,9 +67,11 @@ The following steps substitute the formula for $T$ in and perform algebraic simp
 
 $$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + (y + \mathrm{d}y)'^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x,$$
 
-$$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y' + \mathrm{d}y'^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x,$$
+$$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y' + \mathrm{d}y'^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x.$$
 
-$$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y'}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x \because \mathrm{d}y^2 \rightarrow 0,$$
+Here we find ourselves with a differential squared, which goes to 0, because when considering derivatives, we only care about the linear term
+
+$$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y'}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x,$$
 
 $$\mathrm{d}T = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{2y'\mathrm{d}y'}{1+y'^2}\right)^{1/2}\left(1+\frac{\mathrm{d}y}{y}\right)^{-1/2} - 1 \right] \; \mathrm{d}x,$$
 
