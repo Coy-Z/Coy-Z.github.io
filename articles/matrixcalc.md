@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Brachistochrone Problem
+title: Matrix Calculus
 permalink: /articles/matrixcalc/
 ---
 
