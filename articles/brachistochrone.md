@@ -105,15 +105,15 @@ $$\left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right)' + \frac{\sqrt{1 + y'^2}}{2y\
 
 Applying the quotient rule on the first term,
 
-$$\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = -\frac{y"\sqrt{(1+y'^2)(-2gy)} - y'\left( \frac{\sqrt{-2gy}}{\sqrt{1+y'^2}}y'y" - \frac{\sqrt{1+y'^2}}{\sqrt{-2gy}}gy' \right)}{(1+y'^2)(-2gy)},$$
+$$\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = -\frac{y''\sqrt{(1+y'^2)(-2gy)} - y'\left( \frac{\sqrt{-2gy}}{\sqrt{1+y'^2}}y'y'' - \frac{\sqrt{1+y'^2}}{\sqrt{-2gy}}gy' \right)}{(1+y'^2)(-2gy)},$$
 
-$$\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = -\frac{y"(1+y'^2)(-2gy) - y'^2\left( -2gyy" - (1+y'^2)g \right)}{\left[(1+y'^2)(-2gy)\right]^{3/2}},$$
+$$\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = -\frac{y''(1+y'^2)(-2gy) - y'^2\left( -2gyy'' - (1+y'^2)g \right)}{\left[(1+y'^2)(-2gy)\right]^{3/2}},$$
 
-$$\frac{(1 + y'^2)^2}{2y} = \frac{y"(1+y'^2)(-2gy) + y'^2\left( 2gyy" + (1+y'^2)g \right)}{2gy},$$
+$$\frac{(1 + y'^2)^2}{2y} = \frac{y''(1+y'^2)(-2gy) + y'^2\left( 2gyy'' + (1+y'^2)g \right)}{2gy},$$
 
-$$(1 + y'^2)^2 = -2yy"(1+y'^2) + y'^2\left( 2yy" + (1+y'^2) \right),$$
+$$(1 + y'^2)^2 = -2yy''(1+y'^2) + y'^2\left( 2yy'' + (1+y'^2) \right),$$
 
-$$(1 + y'^2) = -2yy".$$
+$$1 + 2yy'' + y'^2 = 0.$$
 
 We merely need to solve this differential equation for y, or some condition of y.
 
