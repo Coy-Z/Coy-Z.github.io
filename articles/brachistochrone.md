@@ -108,3 +108,8 @@ Applying the quotient rule on the first term,
 $$\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = -\frac{y"\sqrt{(1+y'^2)(-2gy)} - y'\left( \frac{\sqrt{-2gy}}{\sqrt{1+y'^2}}y'y" - \frac{\sqrt{1+y'^2}}{\sqrt{-2gy}}gy' \right)}{(1+y'^2)(-2gy)},$$
 
 $$\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = -\frac{y"(1+y'^2)(-2gy) - y'^2\left( -2gy'y" - (1+y'^2)gy' \right)}{\left[(1+y'^2)(-2gy)\right]^{3/2}},$$
+
+$$\frac{(1 + y'^2)^2}{2y} = \frac{y"(1+y'^2)(-2gy) + y'^2\left( 2gy'y" + (1+y'^2)gy' \right)}{2gy},$$
+
+$$(1 + y'^2)^2 = -2yy"(1+y'^2) + y'^2\left( 2y'y" + (1+y'^2)y' \right),$$
+
