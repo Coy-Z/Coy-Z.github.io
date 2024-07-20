@@ -10,4 +10,4 @@ permalink: /articles/matrixcalc/
 
 We all know the formula of derivatives,
 
-$$f'(x) = \frac{\rm{d}f}{\rm{d}x}$$
+$$f'(x) = \frac{\mathrm{d}f}{\mathrm{d}x}$$
