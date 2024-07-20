@@ -93,7 +93,13 @@ $$\mathrm{d}T = \left[ \left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right) \mathrm{
 
 At $x = 0$ and $x = L$, we have defined fixed co-ordinates of $(0,0)$ and $(L,-H)$, and so any slight change in $y$ cannot change the values of $y(0)$ and $y(L)$, i.e. $dy(0) = dy(L) = 0$. Applying this removes the first term,
 
-$$\mathrm{d}T = - \int _0 ^L \left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right)' \mathrm{d}y \; \mathrm{d}x - \left[\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} \cdot \mathrm{d}y\right].$$
+$$\mathrm{d}T = - \int _0 ^L \left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right)' \mathrm{d}y \; \mathrm{d}x - \left[\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} \cdot \mathrm{d}y\right],$$
 
-$$\mathrm{d}T = - \left[\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}' - \frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}}\right] \cdot \mathrm{d}y.$$
+$$\mathrm{d}T = - \left[\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}' + \frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}}\right] \cdot \mathrm{d}y,$$
+
+$$\therefore \nabla _y T = - \left[\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}' + \frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}}\right].$$
+
+To find the minimum T, we now need to find where $\nabla _y T = 0$, i.e.
+
+$$\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}' + \frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = 0.$$
 
