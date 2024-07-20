@@ -115,5 +115,43 @@ $$(1 + y'^2)^2 = -2yy''(1+y'^2) + y'^2\left( 2yy'' + (1+y'^2) \right),$$
 
 $$1 + 2yy'' + y'^2 = 0.$$
 
-We merely need to solve this differential equation for y, or some condition of y.
+We merely need to solve this differential equation for $y$, or some condition of $y$. It turns out that this equation is non-trivial to solve and instead we take the approach of validating the true solution.
+
+It can be proved via other methods that the brachistochrone must hold the form of a cycloid, which has governing equations,
+
+$$x = a(\theta - \sin \theta)$$
+
+$$y = a(1 - \cos \theta).$$
+
+Using chain rule, we can state that $\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}y/\mathrm{d}\theta}{\mathrm{d}x/\mathrm{d}\theta}$ and similar for chain rule.
+
+$$\frac{\mathrm{d}y}{\mathrm{d}\theta} = a \sin \theta,$$
+
+$$\frac{\mathrm{d}x}{\mathrm{d}\theta} = a (1 - \cos \theta),$$
+
+$$\implies y' = \frac{\sin \theta}{1 - \cos \theta},$$
+
+$$y'' = \frac{\mathrm{d}y'/\mathrm{d}\theta}{\mathrm{d}x/\mathrm{d}\theta},$$
+
+$$\frac{\mathrm{d}y'}{\mathrm{d}\theta} = \frac{\mathrm{d}}{\mathrm{d}\theta} \frac{\sin \theta}{1 - \cos \theta},$$
+
+$$\frac{\mathrm{d}y'}{\mathrm{d}\theta} = \frac{\cos \theta (1 - \cos \theta) - \sin^2 \theta}{(1 - \cos \theta)^2},$$
+
+$$\frac{\mathrm{d}y'}{\mathrm{d}\theta} = \frac{\cos \theta - 1}{(\cos \theta - 1)^2} = \frac{1}{\cos \theta - 1},$$
+
+$$\implies y'' = -\frac{1}{a(1 - \cos \theta)^2}.$$
+
+Now let us substitute these expressions for $y'', y'$ and $y$ into the differential equation.
+
+$$\frac{\sin \theta}{1 - \cos \theta}^2 - 2a(1 - \cos \theta)\frac{1}{a(1 - \cos \theta)^2} = -1$$
+
+$$-\frac{\sin \theta}{1 - \cos \theta}^2 + \frac{2}{(1 - \cos \theta)} = 1$$
+
+$$\frac{-\sin^2 \theta + 2 - 2\cos\theta}{(1 - \cos\theta)^2} = 1$$
+
+$$\frac{\cos^2 \theta - 2\cos\theta + 1}{(1 - \cos\theta)^2} = 1$$
+
+$$\frac{(1 - \cos\theta)^2}{(1 - \cos\theta)^2} = 1$$
+
+$$\qed$$
 
