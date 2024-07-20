@@ -101,5 +101,10 @@ $$\therefore \nabla _y T = - \left[\left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\rig
 
 To find the minimum T, we now need to find where $\nabla _y T = 0$, i.e.
 
-$$\left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right)'' + \frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = 0.$$
+$$\left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right)' + \frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = 0.$$
 
+Applying the quotient rule on the first term,
+
+$$\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = -\frac{y"\sqrt{(1+y'^2)(-2gy)} - y'\left( \frac{\sqrt{-2gy}}{\sqrt{1+y'^2}}y'y" - \frac{\sqrt{1+y'^2}}{\sqrt{-2gy}}gy' \right)}{(1+y'^2)(-2gy)},$$
+
+$$\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = -\frac{y"(1+y'^2)(-2gy) - y'^2\left( -2gy'y" - (1+y'^2)gy' \right)}{\left[(1+y'^2)(-2gy)\right]^{3/2}},$$
