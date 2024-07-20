@@ -32,11 +32,13 @@ $$\mathrm{d}t = \frac{\mathrm{d}s}{v}.$$
 It appears as though we have added more problems for ourselves! However, we can apply the conservation of energy to find v, as shown below,
 
 $$mg \Delta h = \frac{1}{2}mv^2,$$
+
 $$v = \sqrt{2g \Delta h}.$$
 
 From our definitions of the problem parameters, i.e. the start and end points of the slope,
 
 $$\implies \Delta h = -y,$$
+
 $$\therefore v = \sqrt{-2gy}.$$
 
 The next piece of the puzzle is to determine $\mathrm{d}s$, but this is just an infinitesimal increment of the arc length, and so can be given by the standard formula,
