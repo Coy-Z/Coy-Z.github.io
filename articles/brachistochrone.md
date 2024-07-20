@@ -61,4 +61,6 @@ $$\langle u,v \rangle = \int uv\; \mathrm{d}x.$$
 
 Now, let us use this in calculating $\nabla _y T$,
 
-$$\mathrm{d}f = \int \left{ \frac{\sqrt{1 + \left[(y + \mathrm{d}y)' \right]^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right}\; \mathrm{d}x$$
+\[
+    \mathrm{d}f = \int \left{ \frac{\sqrt{1 + \left[(y + \mathrm{d}y)' \right]^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right}\; \mathrm{d}x.
+\]
