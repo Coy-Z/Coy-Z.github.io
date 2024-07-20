@@ -47,7 +47,7 @@ $$\mathrm{d}s = \sqrt{1 + y'^2}\mathrm{d}x.$$
 
 This gives us the final formula for $T$,
 
-$$T(y) = \int \frac{\sqrt{1 + y^2}}{\sqrt{-2gy}}\mathrm{d}x.$$
+$$T(y) = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}}\; \mathrm{d}x.$$
 
 ## Functional Differentiation
 
@@ -57,4 +57,8 @@ $$\mathrm{d}f = \nabla f(x) \cdot \mathrm{d}x.$$
 
 and we generalise the inner/dot product to the Hilbert space of functions. We define the inner product of $u,v \in \mathcal{V}$ to be,
 
-$$\langle u,v \rangle = \int uv \mathrm{d}x.$$
+$$\langle u,v \rangle = \int uv\; \mathrm{d}x.$$
+
+Now, let us use this in calculating $\nabla _y T$,
+
+$$\mathrm{d}f = \int \{ \frac{\sqrt{1 + \[(y + \mathrm{d}y)'\]^2}}{\sqrt{-2g(y+\mathrm{d}y)}}- \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}}\}\; \mathrm{d}x
