@@ -23,26 +23,26 @@ Here, $y \in \mathcal{V}$ where $\mathcal{V}$ denotes the vector space of functi
 We wish to determine the minimum value of a functional $T: \mathcal{V} \rightarrow \mathbb{R}$.
 To quantify the time of descent, $T$, we need to perform the integral
 
-$$T(y) = \int \mathrm{d}t$$,
+$$T(y) = \int \mathrm{d}t,$$
 
 where $\mathrm{d}t$ is a minute timestep. We can calculate $\mathrm{d}t$ as
 
-$$\mathrm{d}t = \frac{\mathrm{d}s}{v}$$.
+$$\mathrm{d}t = \frac{\mathrm{d}s}{v}.$$
 
 It appears as though we have added more problems for ourselves! However, we can apply the conservation of energy to find v, as shown below,
 
-$$mg \Delta h = \frac{1}{2}mv^2$$,
-$$v = \sqrt{2g \Delta h}$$.
+$$mg \Delta h = \frac{1}{2}mv^2,$$
+$$v = \sqrt{2g \Delta h}.$$
 
 From our definitions of the problem parameters, i.e. the start and end points of the slope,
 
-$$\implies \Delta h = -y$$,
-$$\therefore v = \sqrt{-2gy}$$.
+$$\implies \Delta h = -y,$$
+$$\therefore v = \sqrt{-2gy}.$$
 
 The next piece of the puzzle is to determine $\mathrm{d}s$, but this is just an infinitesimal increment of the arc length, and so can be given by the standard formula,
 
-$$\mathrm{d}s = \sqrt{1 + y'^2}\mathrm{d}x$$.
+$$\mathrm{d}s = \sqrt{1 + y'^2}\mathrm{d}x.$$
 
 This gives us the final formula for $T$,
 
-$$T(y) = \int \frac{\sqrt{1 + y^2}}{\sqrt{-2gy}}\mathrm{d}x$$
+$$T(y) = \int \frac{\sqrt{1 + y^2}}{\sqrt{-2gy}}\mathrm{d}x.$$
