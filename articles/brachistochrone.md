@@ -63,15 +63,24 @@ Now, let us use this in calculating $\nabla _y T$,
 
 $$\mathrm{d}T = T(y+dy) - T(y).$$
 
-The following steps substitute the formula for $T$ in and perform algebraic simplification, making use of binomial expansions,
+The following steps substitute the formula for $T$ in and perform algebraic simplification,
 
 $$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + (y + \mathrm{d}y)'^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x,$$
 
 $$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y' + \mathrm{d}y'^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x.$$
 
-Here we find ourselves with a differential squared, which goes to 0, because when considering derivatives, we only care about the linear term
+Here we find ourselves with a differential squared, which goes to 0, because when considering derivatives, we only care about the linear term.
 
 $$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y'}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x,$$
 
-$$\mathrm{d}T = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{2y'\mathrm{d}y'}{1+y'^2}\right)^{1/2}\left(1+\frac{\mathrm{d}y}{y}\right)^{-1/2} - 1 \right] \; \mathrm{d}x,$$
+$$\mathrm{d}T = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{2y'\mathrm{d}y'}{1+y'^2}\right)^{1/2}\left(1+\frac{\mathrm{d}y}{y}\right)^{-1/2} - 1 \right] \; \mathrm{d}x.$$
 
+The equation now begs for binomial expansion to be used upon it, so we will take the hint and proceed,
+
+$$\mathrm{d}T = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{y'\mathrm{d}y'}{1+y'^2}\right)\left(1-\frac{\mathrm{d}y}{2y}\right) - 1 \right] \; \mathrm{d}x,$$
+
+$$\mathrm{d}T = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{y'\mathrm{d}y'}{1+y'^2}-\frac{\mathrm{d}y}{2y} + \mathcal(O)(dy'^2)\right) - 1 \right] \; \mathrm{d}x.$$
+
+Again, we discard the second order $dy'^2$ terms,
+
+$$\mathrm{d}T = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[\frac{y'\mathrm{d}y'}{1+y'^2}-\frac{\mathrm{d}y}{2y}\right] \; \mathrm{d}x.$$
