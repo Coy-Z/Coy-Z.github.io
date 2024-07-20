@@ -17,11 +17,7 @@
       <header style="text-align: center;">
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
-        {% if site.logo %}
-            <img src="{{site.logo | relative_url}}" alt="Logo" />
-        {% endif %}
-
-        <img src="/files/mayball24.jpg" alt=""/>
+        <!--<img src="/files/mayball24.jpg" alt=""/>-->
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
@@ -33,7 +29,7 @@
         </ul>
         {% endif %}-->
 
-        <nav aria-label="Main" id="site-nav" class="site-nav">
+        <nav aria-label="Main" id="site-nav" class="site-nav" style="text-align: left;">
           <ul class="nav-list">
             <li class="nav-list-item">
               <a href="/" class="nav-list-link">Home</a>
