@@ -57,8 +57,9 @@ $$\mathrm{d}f = \nabla f(x) \cdot \mathrm{d}x.$$
 
 and we generalise the inner/dot product to the Hilbert space of functions. We define the inner product of $u,v \in \mathcal{V}$ to be,
 
-$$\langle u,v \rangle = \int uv\; \mathrm{d}x.$$
+$$\langle u,v \rangle = \int _0 ^L uv\; \mathrm{d}x.$$
 
 Now, let us use this in calculating $\nabla _y T$,
 
-$$\mathrm{d}T = \int \left{ \frac{\sqrt{1 + \left[(y + \mathrm{d}y)' \right]^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right}\; \mathrm{d}x.$$
+$$\mathrm{d}T = \int \left{ \frac{\sqrt{1 + \left[(y + \mathrm{d}y)' \right]^2}}{\sqrt{-2g(y+\mathrm{d}y)}}$$
+<!-- - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right}\; \mathrm{d}x.-->
