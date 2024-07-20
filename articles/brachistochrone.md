@@ -61,4 +61,15 @@ $$\langle u,v \rangle = \int _0 ^L uv\; \mathrm{d}x.$$
 
 Now, let us use this in calculating $\nabla _y T$,
 
-$$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + \left[(y + \mathrm{d}y)' \right]^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x.$$
+$$\mathrm{d}T = T(y+dy) - T(y).$$
+
+The following steps substitute the formula for $T$ in and perform algebraic simplification, making use of binomial expansions,
+
+$$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + (y + \mathrm{d}y)'^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x,$$
+
+$$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y' + \mathrm{d}y'^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x,$$
+
+$$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y'}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x \because \mathrm{d}y^2 \rightarrow 0,$$
+
+$$\mathrm{d}T = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{2y'\mathrm{d}y'}{1+y'^2}\right)^{1/2}\left(1+\frac{\mathrm{d}y}{y}\right)^{-1/2} - 1 \right] \; \mathrm{d}x,$$
+
