@@ -65,22 +65,35 @@ $$\mathrm{d}T = T(y+dy) - T(y).$$
 
 The following steps substitute the formula for $T$ in and perform algebraic simplification,
 
-$$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + (y + \mathrm{d}y)'^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x,$$
+$$\mathrm{d}T = \int _0 ^L \left[ \frac{\sqrt{1 + (y + \mathrm{d}y)'^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x,$$
 
-$$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y' + \mathrm{d}y'^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x.$$
+$$\mathrm{d}T = \int _0 ^L \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y' + \mathrm{d}y'^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x.$$
 
 Here we find ourselves with a differential squared, which goes to 0, because when considering derivatives, we only care about the linear term.
 
-$$\mathrm{d}T = \int \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y'}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x,$$
+$$\mathrm{d}T = \int _0 ^L \left[ \frac{\sqrt{1 + y'^2 + 2y'\mathrm{d}y'}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right] \; \mathrm{d}x,$$
 
-$$\mathrm{d}T = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{2y'\mathrm{d}y'}{1+y'^2}\right)^{1/2}\left(1+\frac{\mathrm{d}y}{y}\right)^{-1/2} - 1 \right] \; \mathrm{d}x.$$
+$$\mathrm{d}T = \int _0 ^L \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{2y'\mathrm{d}y'}{1+y'^2}\right)^{1/2}\left(1+\frac{\mathrm{d}y}{y}\right)^{-1/2} - 1 \right] \; \mathrm{d}x.$$
 
 The equation now begs for binomial expansion to be used upon it, so we will take the hint and proceed,
 
-$$\mathrm{d}T = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{y'\mathrm{d}y'}{1+y'^2}\right)\left(1-\frac{\mathrm{d}y}{2y}\right) - 1 \right] \; \mathrm{d}x,$$
+$$\mathrm{d}T = \int _0 ^L \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{y'\mathrm{d}y'}{1+y'^2}\right)\left(1-\frac{\mathrm{d}y}{2y}\right) - 1 \right] \; \mathrm{d}x,$$
 
-$$\mathrm{d}T = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{y'\mathrm{d}y'}{1+y'^2}-\frac{\mathrm{d}y}{2y} + \mathcal(O)(dy'^2)\right) - 1 \right] \; \mathrm{d}x.$$
+$$\mathrm{d}T = \int _0 ^L \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[ \left(1 + \frac{y'\mathrm{d}y'}{1+y'^2}-\frac{\mathrm{d}y}{2y} + \mathcal(O)(dy'^2)\right) - 1 \right] \; \mathrm{d}x.$$
 
 Again, we discard the second order $dy'^2$ terms,
 
-$$\mathrm{d}T = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[\frac{y'\mathrm{d}y'}{1+y'^2}-\frac{\mathrm{d}y}{2y}\right] \; \mathrm{d}x.$$
+$$\mathrm{d}T = \int _0 ^L \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \left[\frac{y'\mathrm{d}y'}{1+y'^2}-\frac{\mathrm{d}y}{2y}\right] \; \mathrm{d}x,$$
+
+$$\mathrm{d}T = \int _0 ^L \frac{y'\mathrm{d}y'}{\sqrt{1+y'^2}\sqrt{-2gy}} \; \mathrm{d}x - \int _0 ^L \frac{\sqrt{1 + y'^2}\mathrm{d}y}{2y\sqrt{-2gy}}\; \mathrm{d}x,$$
+
+We wish to acquire something of the form, $\nabla _y T \cdot \mathrm{d}y = \int _0 ^L \nabla _y T \mathrm{d}y \mathrm{d}x$, so we employ integration by parts on the left hand term,
+
+$$\mathrm{d}T = \left[ \left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right) \mathrm{d}y \right] _0 ^L - \int _0 ^L \left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right)' \mathrm{d}y \; \mathrm{d}x - \left[\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} \cdot \mathrm{d}y\right].$$
+
+At $x = 0$ and $x = L$, we have defined fixed co-ordinates of $(0,0)$ and $(L,-H)$, and so any slight change in $y$ cannot change the values of $y(0)$ and $y(L)$, i.e. $dy(0) = dy(L) = 0$. Applying this removes the first term,
+
+$$\mathrm{d}T = - \int _0 ^L \left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right)' \mathrm{d}y \; \mathrm{d}x - \left[\frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} \cdot \mathrm{d}y\right].$$
+
+$$\mathrm{d}T = - \left[\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}' - \frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}}\right] \cdot \mathrm{d}y.$$
+
