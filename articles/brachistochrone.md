@@ -23,7 +23,7 @@ Here, $y \in \mathcal{V}$ where $\mathcal{V}$ denotes the vector space of functi
 We wish to determine the minimum value of a functional $T: \mathcal{V} \rightarrow \mathbb{R}$.
 To quantify the time of descent, $T$, we need to perform the integral
 
-$$T(y) = \int \mathrm{d}t,$$
+$$T(y) = \int _0 ^T \mathrm{d}t,$$
 
 where $\mathrm{d}t$ is a minute timestep. We can calculate $\mathrm{d}t$ as
 
@@ -47,7 +47,7 @@ $$\mathrm{d}s = \sqrt{1 + y'^2}\mathrm{d}x.$$
 
 This gives us the final formula for $T$,
 
-$$T(y) = \int \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}}\; \mathrm{d}x.$$
+$$T(y) = \int _0 ^L \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}}\; \mathrm{d}x.$$
 
 ## Functional Differentiation
 
@@ -61,6 +61,4 @@ $$\langle u,v \rangle = \int uv\; \mathrm{d}x.$$
 
 Now, let us use this in calculating $\nabla _y T$,
 
-\[
-    \mathrm{d}f = \int \left{ \frac{\sqrt{1 + \left[(y + \mathrm{d}y)' \right]^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right}\; \mathrm{d}x.
-\]
+$$\mathrm{d}T = \int \left{ \frac{\sqrt{1 + \left[(y + \mathrm{d}y)' \right]^2}}{\sqrt{-2g(y+\mathrm{d}y)}} - \frac{\sqrt{1 + y'^2}}{\sqrt{-2gy}} \right}\; \mathrm{d}x.$$
