@@ -11,6 +11,8 @@ On this webpage, I have used javascript to render the program to work in the web
 
 You can download the raw C++ file <a href="/files/Donut.cpp" download>here</a>.
 However, the code is displayed below, with descriptive text added throughout. For a full rundown, the originator of this project wrote an <a href="https://www.a1k0n.net/2011/07/20/donut-math.html">article</a> describing the in-depth mathematics behind the donut. I used some of their pseudocode for inspiration.
+
+## The Code
 ~~~
 // This project aims to program a rotating torus animation using ascii characters.
 
@@ -52,7 +54,7 @@ struct vector_scalar {
 ~~~
 The projection works as per the diagram shown below. We store the reciprocal of z so to determine the distance of the point from the origin. Later, we will compare the reciprocal of z to determine whether to display a pixel or not. r1 represents the coordinates on the projected screen.
 
-<img src="/files/perspective.png" alt="" width="400" height="200"/>
+<img src="/files/perspective.png" alt="" width="400" height="200">
 ~~~
 // Define projection function
 vector_scalar point_projection(double x, double y, double z) {
@@ -196,5 +198,7 @@ int main() {
 	}
 }
 ~~~
+
+## The Code
 
 I have rendered the animation into the webpage below.
