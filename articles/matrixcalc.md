@@ -47,6 +47,6 @@ $$f : \mathbb{R}^n \rightarrow \mathbb{R}^m,$$
 
 i.e. $f$ is an m-vector and $x$ an n-vector. In this case, for the derivative formula to be satisfied, we require
 
-$$f'(x) \in \mathbb{R}^m \times \mathbb{R}^n,$$
+$$f'(x) \in \mathbb{R}^{m \times n},$$
 
 and so in this example, $f'(x)$ is a matrix.
