@@ -24,7 +24,6 @@ And so, we are left with the resulting approximation,
 $$f(x + \delta x) \approx f(x) + f'(x)\delta x.$$
 
 In essence, the reason we refer to this as linearisation since we have effectively computed the function which is tangent to $f$ at $x$. This idea is key, since we can generalise this to more complicated objects, e.g. a surface $f$ is linearised to a plane.
-
 The approximation above becomes an equality as $\lim_{\delta x \rightarrow 0}$, in which case the $\delta x$ becomes a differential $\mathrm{d}x$,
 
 $$f(x + \mathrm{d}x) = f(x) + f'(x)\mathrm{d}x.$$
@@ -38,5 +37,16 @@ and we can represent $f(x + \mathrm{d}x)$ as $f + \mathrm{d}f$, which gives,
 $$\mathrm{d}f = f'(x)\mathrm{d}x.$$
 
 We can recognise that this is effectively ``multiplying up" the $\mathrm{d}x$ on both sides of our standard form for the single-variable derivative formula.
+Now, it is immediately apparent that this form of the derivative is far more generalised, because $\mathrm{d}x$ is not limited to $\mathbb{R}$.
 
-It is immediately apparent that this form of the derivative is far more generalised, because $\mathrm{d}x$ is not limited to $\mathbb{R}$.
+We call $f'(x)$ the \textbf{Jacobian}.
+
+Take, for example, some function $f$ such that,
+
+$$f : \mathbb{R}^n \rightarrow \mathbb{R}^m,$$
+
+i.e. $f$ is an m-vector and $x$ an n-vector. In this case, for the derivative formula to be satisfied, we require
+
+$$f'(x) \in \mathbb{R}^m \times \mathbb{R}^n,$$
+
+and so in this example, $f'(x)$ is a matrix.
