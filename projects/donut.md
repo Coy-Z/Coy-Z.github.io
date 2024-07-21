@@ -205,14 +205,4 @@ int main() {
 }
 ~~~
 
-## The Animation
-
-I have rendered the animation into the webpage below.
-
-<script>
-
-
-
-</script>
-
 16/07/2024
