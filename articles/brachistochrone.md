@@ -99,6 +99,8 @@ $$\mathrm{d}T = - \left[\left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right)' + \fra
 
 $$\therefore \nabla _y T = - \left[\left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right)' + \frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}}\right].$$
 
+## Constructing the Governing Differential Equation
+
 To find the minimum T, we now need to find where $\nabla _y T = 0$, i.e.
 
 $$\left(\frac{y'}{\sqrt{1+y'^2}\sqrt{-2gy}}\right)' + \frac{\sqrt{1 + y'^2}}{2y\sqrt{-2gy}} = 0.$$
