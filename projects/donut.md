@@ -9,8 +9,8 @@ permalink: /projects/donut/
 The task in this project was to develop a program that displays a rotating donut in console, using ascii characters.
 On this webpage, I have used javascript to render the program to work in the webpage.
 
-You can download the raw C++ file <a href="/files/Donut.cpp" download>here</a>. However the code is displayed below.
-
+You can download the raw C++ file <a href="/files/Donut.cpp" download>here</a>.
+However, the code is displayed below, with descriptive text added throughout. For a full rundown, the originator of this project wrote an <a href="https://www.a1k0n.net/2011/07/20/donut-math.html">article</a> describing the in-depth mathematics behind the donut. I used some of their pseudocode for inspiration.
 ~~~
 // This project aims to program a rotating torus animation using ascii characters.
 
@@ -27,8 +27,14 @@ You can download the raw C++ file <a href="/files/Donut.cpp" download>here</a>. 
 #include <thread>
 #include <array>
 #include <omp.h>
+~~~
+In the following section, I use macros to define some constants.
 
+R1 denotes the minor radius and R2 the major radius of the torus.
+z1 gives the distance to the center of the torus from the origin and z0 the distance from origin to the projecting screen.
 
+I also define a data structure to make for ease of data transfer between functions later.
+~~~
 #define screen_width 100
 #define screen_height 100
 #define R1 1
@@ -43,7 +49,11 @@ struct vector_scalar {
 	std::vector<double> vector;
 	double scalar;
 };
+~~~
+The projection works as per the diagram shown below. We store the reciprocal of z so to determine the distance of the point from the origin. Later, we will compare the reciprocal of z to determine whether to display a pixel or not. r1 represents the coordinates on the projected screen.
 
+<img src="/files/perspective.png" alt="" width="400" height="200"/>
+~~~
 // Define projection function
 vector_scalar point_projection(double x, double y, double z) {
 	double X, Y, ooz;
@@ -57,7 +67,9 @@ vector_scalar point_projection(double x, double y, double z) {
 
 	return r1ooz;
 }
-
+~~~
+I define the pixel positions for the surface of the torus. The expressions were determined using matrix multiplications of several rotation matrices and the locus of one single cross-sectional circle of the torus.
+~~~
 // Define the pixel function
 std::vector<double> position(double theta, double phi, double A, double B) {
 	double X, Y, Z;
@@ -82,7 +94,9 @@ std::vector<double> position(double theta, double phi, double A, double B) {
 	std::vector<double> r = { X,Y,Z };
 	return r;
 }
-
+~~~
+The illumination index is defined similarly to the pixel positions but instead the matrices are used to find the normal surface vectors. Then, we dot the surface vectors with the light source direction to calculate an index.
+~~~
 // Illumination
 double illumination(double theta, double phi, double A, double B) {
 	double Nx, Ny, Nz, L;
@@ -112,7 +126,9 @@ double illumination(double theta, double phi, double A, double B) {
 	L /= sqrt(2);
 	return L + 1;
 }
-
+~~~
+Here, we form a large 2D array to represent each pixel on the projected screen, and calculate what ascii character to display at each pixel, given the reciprocal of z and the illumination index. The frame is then displayed by printing into console, and then clearing the display, followed by reprinting.
+~~~
 // Frame Rendering
 void frame(double A, double B) {
 	// Local variable declarations
@@ -167,7 +183,9 @@ void frame(double A, double B) {
 	}
 	// Could add double buffering
 }
-
+~~~
+The main loop increments A and B for the animation movement, and adds a sleep timer.
+~~~
 // Main
 int main() {
 	double A, B;
@@ -182,3 +200,4 @@ int main() {
 }
 ~~~
 
+I have rendered the animation into the webpage below.
