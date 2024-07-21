@@ -1,12 +1,14 @@
 ---
 layout: default
-title: Olympiad Results
-permalink: /CV/olympiadresults/
+title: High School Awards
+permalink: /CV/highschool/
 ---
 
-# High School Olympiad Results
+# High School Awards
 
-On this page, I list all of my olympiad results during my time in secondary education (age 11-18).
+On this page, I list all of my achievements during my time in secondary education (age 11-18).
+
+# Olympiads
 
 ## Physics Olympiads
 
