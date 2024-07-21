@@ -4,6 +4,11 @@ title: Donut
 permalink: /projects/donut/
 ---
 
+<head>
+    <script src="/files/donut.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
 # Donut
 
 The task in this project was to develop a program that displays a rotating donut in console, using ascii characters.
@@ -199,6 +204,12 @@ int main() {
 }
 ~~~
 
-## The Code
+## The Animation
 
 I have rendered the animation into the webpage below.
+
+<script>
+
+
+
+</script>
