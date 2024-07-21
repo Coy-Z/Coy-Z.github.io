@@ -136,9 +136,7 @@ void frame(double A, double B) {
 	double ooz, L, theta, phi;
 	vector_scalar r1ooz;
 
-	// Initialise output and buffer arrays, where the buffer is to double buffer the output, reducing frame lag
-	//static char output[screen_width][screen_height];
-	//memset(output, ' ', sizeof output);
+	// Initialise output array for storing the ascii characters to display
 	static std::array<std::array<char, screen_width>, screen_height> output;
 	std::memset(output.data(), ' ', sizeof(char) * screen_width * screen_height);
 
@@ -147,7 +145,6 @@ void frame(double A, double B) {
 	memset(buffer, ' ', sizeof output);*/
 
 	// Initialise Z buffer to determine whether the point would be visible to us or not
-	//double z_buffer[screen_width][screen_height] = { 0 };
 	std::array<std::array<double, screen_width>, screen_height> z_buffer;
 	std::memset(z_buffer.data(), 0, sizeof(double) * screen_width * screen_height);
 
