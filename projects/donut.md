@@ -9,7 +9,7 @@ permalink: /projects/donut/
 The task in this project was to develop a program that displays a rotating donut in console, using ascii characters.
 On this webpage, I have used javascript to render the program to work in the webpage.
 
-You can download the raw C++ file <a href="/files/Donut.cpp/">here</a>. However the code is displayed below.
+You can download the raw C++ file <a href="/files/Donut.cpp" download>here</a>. However the code is displayed below.
 
 ~~~
 // This project aims to program a rotating torus animation using ascii characters.
