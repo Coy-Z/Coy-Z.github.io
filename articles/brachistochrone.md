@@ -121,9 +121,9 @@ It can be proved via other methods that the brachistochrone must hold the form o
 
 $$x = a(\theta - \sin \theta)$$
 
-$$y = a(1 - \cos \theta).$$
+$$y = a(1 - \cos \theta)$$
 
-Using chain rule, we can state that $\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}y/\mathrm{d}\theta}{\mathrm{d}x/\mathrm{d}\theta}$, and this is calculated below,
+if passing through the origin. Using chain rule, we can state that $\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}y/\mathrm{d}\theta}{\mathrm{d}x/\mathrm{d}\theta}$, and this is calculated below,
 
 $$\frac{\mathrm{d}y}{\mathrm{d}\theta} = a \sin \theta,$$
 
@@ -163,3 +163,8 @@ $$\frac{(1 - \cos\theta)^2}{(1 - \cos\theta)^2} = 1.$$
 
 $$\square$$
 
+Since we have now shown the cycloid to be a valid solution of the differential equation, the next step is to calculate the parameters, i.e. we need to fit the curve to pass through the origin and $(L, -H)$. The starting point has already been dealt for us, so all that is left is to fit it to the end point. This is, however, a matter of solving two fairly non-trivial simultaneous equations. Instead of solving, I have listed the equations below, since this would be a far easier job if done numerically.
+
+$$L = a(\theta - \sin \theta)$$
+
+$$-H = a(1 - \cos \theta)$$
