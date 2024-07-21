@@ -39,7 +39,7 @@ $$\mathrm{d}f = f'(x)\mathrm{d}x.$$
 We can recognise that this is effectively ``multiplying up" the $\mathrm{d}x$ on both sides of our standard form for the single-variable derivative formula.
 Now, it is immediately apparent that this form of the derivative is far more generalised, because $\mathrm{d}x$ is not limited to $\mathbb{R}$.
 
-We call $f'(x)$ the \textbf{Jacobian}.
+We call $f'(x)$ the **Jacobian**.
 
 Take, for example, some function $f$ such that,
 
