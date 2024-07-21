@@ -55,7 +55,7 @@ What we really wish to aquire is $\nabla _y T$ and set it equal to 0 for the min
 
 $$\mathrm{d}f = \nabla f(x) \cdot \mathrm{d}x.$$
 
-and we generalise the inner/dot product to the Hilbert space of functions. We define the inner product of $u,v \in \mathcal{V}$ to be,
+and we generalise the inner/dot product to the Hilbert space of functions defined and well-behaved in $[0,L]$. We define the inner product of $u,v \in \mathcal{V}$ to be,
 
 $$\langle u,v \rangle = \int _0 ^L uv\; \mathrm{d}x.$$
 
@@ -168,3 +168,5 @@ Since we have now shown the cycloid to be a valid solution of the differential e
 $$L = a(\theta - \sin \theta)$$
 
 $$-H = a(1 - \cos \theta)$$
+
+21/07/2024
