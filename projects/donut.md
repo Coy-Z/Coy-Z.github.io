@@ -11,8 +11,7 @@ On this webpage, I have used javascript to render the program to work in the web
 
 You can download the raw C++ file <a href="/files/Donut.cpp/">here</a>. However the code is displayed below.
 
-```
-{
+~~~
 // This project aims to program a rotating torus animation using ascii characters.
 
 // Coy Zhu - 07/2024
@@ -181,6 +180,5 @@ int main() {
 		B += 0.3;
 	}
 }
-}
-```
+~~~
 
