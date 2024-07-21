@@ -70,3 +70,37 @@ I was awarded a Distinction in the British Maths Olympiad, scoring the highest i
 ### Medal Award in the Intermediate Maths Olympiad (Maclaurin) - 05/2021
 
 I was awarded the Medal award at the Intermediate Maths Olympiad, scoring within the top 50 entrants in the country.
+
+# School Awards and Scholarships
+
+In my A-levels, I topped the school in Physics and Chemistry.
+
+## Speech Day Awards
+
+- The Muriel Petty Prize for Strength of Character - 2023
+- The Simon Eastwood Memorial Prize for Chemistry - 2023
+- Sixth Form Prize for Physics - 2023
+- The Sir David and Lady White Award for Enterprise - 2023
+- Lovell Order for Services as Leaders of the School - 2023
+- Stephen Fairlie Memorial Cup for Senior Music - 2023
+- The Simon Eastwood Memorial Prize for Chemistry - 2022
+- Stephen Fairlie Memorial Cup for Senior Music - 2022
+- Y11 Prize for Mathematics - 2021
+- Sergeant Prize - 2019
+
+## Scholarships
+
+- Sir Thomas White's Entrance Scholar - 2016
+- Music Scholar - 2020
+- Samuel Maple's Examination Scholar - 2021
+- A-Level Examination Scholar - 2023
+
+# Musical Attainment
+
+## Award for Outstanding Instrumentalist
+
+This award was given to me for my saxophone solo as part of the Nottingham High School Big Band at the National Concert Band Festival Final in the Royal Northern College of Music. The band walked away with a gold award.
+
+## DiplomaABRSM in Saxophone
+
+## Grade 8 Merit in Violin
