@@ -53,14 +53,14 @@ $$f'(x) \in \mathbb{R}^{m \times n},$$
 
 and so in this example, $f'(x)$ is a matrix.
 
-Let us consider another example where $f : \mathbb{R}^n \rightarrow \mathbb{R}$$. We call this kind of scalar function a **Loss**/**Cost** function in machine learning, since it takes in many parameters and returns a scalar that quantifies some sort of loss or cost.
+Let us consider another example where $f : \mathbb{R}^n \rightarrow \mathbb{R}$. We call this kind of scalar function a **Loss**/**Cost** function in machine learning, since it takes in many parameters and returns a scalar that quantifies some sort of loss or cost.
 $$\mathrm{d}f = f'(x)\mathrm{d}x$$ tells us that $f'(x)$ must be a row-vector/covector. Using vector notation we can say,
 
 $$\mathrm{d}f = f'(x)^T \cdot \mathrm{d}x.$$
 
 From the equation for the total derivative, we can recall that for some scalar field $f : \mathbb{R}^n \rightarrow \mathbb{R}$ (using Einstein summation convention),
 
-$$\mathrm{d}f = \frac{\partial f}{\partial x^i} \mathrm{d}x_i = \nabla f \cdot \mathrm{d}r.
+$$\mathrm{d}f = \frac{\partial f}{\partial x^i} \mathrm{d}x_i = \nabla f \cdot \mathrm{d}r.$$
 
 Comparing the two equations above,
 
