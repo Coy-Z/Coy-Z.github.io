@@ -6,6 +6,8 @@ permalink: /articles/matrixcalc/
 
 # Matrix Calculus
 
+In this article, I do not use any specifying notation for vectors for sake of generality.
+
 ## Introduction to Differentials and Linearisation
 
 We all know the formula of derivatives,
@@ -18,8 +20,8 @@ Instead, we should consider that the derivative is really a linearisation of a f
 
 $$f(x + \delta x) = f(x) + f'(x)\delta x + \frac{f''(x)}{2}\delta x^2 + ...$$
 
-Linearising the curve means we discard terms $\mathcal{O}(\delta x^2)$ and for $\lim_{\delta x \rightarrow 0}$, this is a logical move.
-And so, we are left with the resulting approximation,
+Linearising the curve means we discard terms $\mathcal{O}(|\delta x|^2)$ and for $\lim_{\delta x \rightarrow 0}$ (small perturbations), this is a logical move.
+Therefore, we are left with the resulting approximation,
 
 $$f(x + \delta x) \approx f(x) + f'(x)\delta x.$$
 
@@ -37,9 +39,9 @@ and we can represent $f(x + \mathrm{d}x)$ as $f + \mathrm{d}f$, which gives,
 $$\mathrm{d}f = f'(x)\mathrm{d}x.$$
 
 We can recognise that this is effectively ``multiplying up" the $\mathrm{d}x$ on both sides of our standard form for the single-variable derivative formula.
-Now, it is immediately apparent that this form of the derivative is far more generalised, because $\mathrm{d}x$ is not limited to $\mathbb{R}$.
+Now, it is immediately apparent that this form of the derivative is far more generalised, because $\mathrm{d}x$ is not limited to $\mathbb{R}$. The above formula holds some genuine meaning in that $\mathrm{d}f$ represents a small output perturbation and $\mathrm{d}x$ a small input perturbation.
 
-We call $f'(x)$ the **Jacobian**.
+We call $f'(x)$ the **Jacobian**. The Jacobian gives the relationship between input and output perturbations and is accurate the smaller the perturbations, since the $\mathcal{O}(|\delta x|^2)$ terms become more and more negligible with respect to the first order.
 
 Take, for example, some function $f$ such that,
 
@@ -50,3 +52,66 @@ i.e. $f$ is an m-vector and $x$ an n-vector. In this case, for the derivative fo
 $$f'(x) \in \mathbb{R}^{m \times n},$$
 
 and so in this example, $f'(x)$ is a matrix.
+
+Let us consider another example where $f : \mathbb{R}^n \rightarrow \mathbb{R}$$. We call this kind of scalar function a **Loss**/**Cost** function in machine learning, since it takes in many parameters and returns a scalar that quantifies some sort of loss or cost.
+$$\mathrm{d}f = f'(x)\mathrm{d}x$$ tells us that $f'(x)$ must be a row-vector/covector. Using vector notation we can say,
+
+$$\mathrm{d}f = f'(x)^T \cdot \mathrm{d}x.$$
+
+From the equation for the total derivative, we can recall that for some scalar field $f : \mathbb{R}^n \rightarrow \mathbb{R}$ (using Einstein summation convention),
+
+$$\mathrm{d}f = \frac{\partial f}{\partial x^i} \mathrm{d}x_i = \nabla f \cdot \mathrm{d}r.
+
+Comparing the two equations above,
+
+$$ \nabla f = f'(x)^T .$$
+
+Establishing the grad operator here allows us to extend grad to virtually all Hilbert spaces (vector spaces with a defined inner product).
+
+## Brief Interlude on Linear Operators
+
+A linear operator is any operator $L: \mathcal{U} \rightarrow \mathcal{V}$ that satisfies the following equation,
+
+$$L(\alpha x + \beta y) = \alpha L(x) + \beta L(y),$$
+
+where $x, y \in \mathcal{U}$ and $\alpha , \beta \in \mathbb{R}$. As a generic example, we can take $L: \mathbb{R}^n \rightarrow \mathbb{R}^m$ such that,
+
+$$L(x) = Ax$$
+
+for a constant $A \in \mathbb{R}^{m \times n}$. From matrix multiplication rules, we can quickly see that,
+
+$$A(\alpha x + \beta y) = \alpha Ax + \beta Ay,$$
+
+because matrix multiplication is distributive and multiplication by scalars is both associative and commutative.
+In a sense, this demonstration is mildly cyclic since matrix multiplication is defined in such a way to satisfy the criteria of linearity, given it represents a linear transformation.
+
+## The Derivative as a Linear Operator
+
+Let us play with an example,
+
+$$f(X) = X^2.$$
+
+Through this example, I hope to establish the first principles for taking the derivative of a matrix function, as well as illustrating the derivative as a linear operator.
+
+From first principles,
+
+$$\mathrm{d}f = f'(X)\mathrm{d}X,$$
+
+$$f'(X)\mathrm{d}X = f(X + \mathrm{d}X) - f(X).$$
+
+Next, we substitute our $f$ into the equation,
+
+$$f'(X)\mathrm{d}X = (X + \mathrm{d}X)^2 - X^2,$$
+
+$$f'(X)\mathrm{d}X = X^2 + X \mathrm{d}X + \mathrm{d}X X + \mathrm{d}X^2 - X^2.$$
+
+In expanding, care must be taken to preserve the order of matrix multiplication since it is a non-commutative operation. We can now discard the non-linear terms, i.e. $\mathcal{O}(\mathrm{d}X^2)$,
+
+$$f'(X)\mathrm{d}X = X \mathrm{d}X + \mathrm{d}X X.$$
+
+On the surface, it may appear as if we are in trouble! How are we going to represent $f'(x)$ as a matrix? In short, we cannot and instead we will define $f'(x)$ as a linear operator, such that
+
+$$f'(X)[\mathrm{d}X] = X \mathrm{d}X + \mathrm{d}X X.$$
+
+This subtle change in notation allows us to differentiate a far greater set of matrix functions.
+
