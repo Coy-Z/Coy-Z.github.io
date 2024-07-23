@@ -20,7 +20,7 @@ Instead, we should consider that the derivative is really a linearisation of a f
 
 $$f(x + \delta x) = f(x) + f'(x)\delta x + \frac{f''(x)}{2}\delta x^2 + ...$$
 
-Linearising the curve means we discard terms $\mathcal{O}(|\delta x|^2)$ and for $\lim_{\delta x \rightarrow 0}$ (small perturbations), this is a logical move.
+Linearising the curve means we discard terms $\mathcal{O}(\mid \delta x \mid^2)$ and for $\lim_{\delta x \rightarrow 0}$ (small perturbations), this is a logical move.
 Therefore, we are left with the resulting approximation,
 
 $$f(x + \delta x) \approx f(x) + f'(x)\delta x.$$
