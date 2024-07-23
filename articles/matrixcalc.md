@@ -41,7 +41,7 @@ $$\mathrm{d}f = f'(x)\mathrm{d}x.$$
 We can recognise that this is effectively "multiplying up" the $\mathrm{d}x$ on both sides of our standard form for the single-variable derivative formula.
 Now, it is immediately apparent that this form of the derivative is far more generalised, because $\mathrm{d}x$ is not limited to $\mathbb{R}$. The above formula holds some genuine meaning in that $\mathrm{d}f$ represents a small output perturbation and $\mathrm{d}x$ a small input perturbation.
 
-We call $f'(x)$ the **Jacobian**. The Jacobian gives the relationship between input and output perturbations and is accurate the smaller the perturbations, since the $\mathcal{O}(\delta x^2)$ terms become more and more negligible with respect to the first order.
+We call $f'(x)$ the **Jacobian**. The Jacobian gives the relationship between input and output perturbations and is accurate the smaller the perturbations, since the $\mathcal{O}(|\delta x|^2)$ terms become more and more negligible with respect to the first order.
 
 Take, for example, some function $f$ such that,
 
