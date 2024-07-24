@@ -59,11 +59,47 @@ $$\mathrm{d}f_i = \frac{\partial f_i}{\partial x^j} \mathrm{d}x_j.$$
 
 Here, we have used Einstein summation notation. Converting this expression into a matrix-vector multiplication, we get
 
-$$\begin{pmatrix} \mathrm{d}f_1 \\ \vdots \\ \mathrm{d}f_m \end{pmatrix} = $$
+$$\begin{pmatrix} \mathrm{d}f_1 \\ \vdots \\ \mathrm{d}f_m \end{pmatrix} = \begin{pmatrix} \frac{\partial f_1}{\partial x^1} & \dots & \frac{\partial f_1}{\partial x^n} \\ \vdots & \ddots & \vdots \\ \frac{\partial f_m}{\partial x^1} & \dots & \frac{\partial f_m}{\partial x^n} \end{pmatrix} \begin{pmatrix} \mathrm{d}x_1 \\ \vdots \\ \mathrm{d}x_n \end{pmatrix}.$$
 
-$$\begin{pmatrix} \frac{\partial f_1}{\partial x^1} & \dots & \frac{\partial f_1}{\partial x^n} \\ \vdots & \ddots & \vdots \\ \frac{\partial f_m}{\partial x^1} & \dots & \frac{\partial f_m}{\partial x^n} \end{pmatrix} $$
+And so we can define the Jacobian matrix,
 
-$$\begin{pmatrix} \mathrm{d}x_1 \\ \vdots \\ \mathrm{d}x_n \end{pmatrix}$$
+$$f'(x) = \begin{pmatrix} \frac{\partial f_1}{\partial x^1} & \dots & \frac{\partial f_1}{\partial x^n} \\ \vdots & \ddots & \vdots \\ \frac{\partial f_m}{\partial x^1} & \dots & \frac{\partial f_m}{\partial x^n} \end{pmatrix}.$$
+
+To reinforce this idea, we will observe a very trivial example. This should also briefly introduce our approach to taking derivatives in matrix calculus. We define $f : \mathbb{R}^n \rightarrow \mathbb{R}^m$ such that,
+
+$$f(x) = Ax,$$
+
+where $A$ is a constant matrix. Starting from first principles,
+
+$$f'(x) \mathrm{d}x = \mathrm{d}f = f(x + \mathrm{d}x) - f(x).$$
+
+Next we substitute the function $f$ into the equation,
+
+$$f'(x) \mathrm{d}x = A(x + \mathrm{d}x) - Ax.$$
+
+Since matrix multiplication is distributive,
+
+$$f'(x) \mathrm{d}x = A \mathrm{d}x,$$
+
+$$f'(x) = A.$$
+
+We have found the Jacobian matrix, but let us check it with our partial derivative construction,
+
+$$\mathrm{d}f_i = \frac{\partial f_i}{\partial x^j} \mathrm{d}x_j.$$
+
+From the definition of the function $f$, we know that,
+
+$$f_i = A_{ij}x_j,$$
+
+and so,
+
+$$\frac{\partial f_i}{\partial x^j} = A_{ij},$$
+
+$$\therefore f'(x)_{ij} = A_{ij} \implies f'(x) = A,$$
+
+which agrees with the above.
+
+## Loss Functions and Grad
 
 Let us consider another example where $f : \mathbb{R}^n \rightarrow \mathbb{R}$. We call this kind of scalar function a **Loss**/**Cost** function in machine learning, since it takes in many parameters and returns a scalar that quantifies some sort of loss or cost.
 $$\mathrm{d}f = f'(x)\mathrm{d}x$$ tells us that $f'(x)$ must be a row-vector/covector. Using vector notation we can say,
@@ -103,15 +139,13 @@ Let us play with an example,
 
 $$f(X) = X^2.$$
 
-Through this example, I hope to establish the first principles for taking the derivative of a matrix function, as well as illustrating the derivative as a linear operator.
+Through this example, I hope to further establish the first principles for taking the derivative of a matrix function, as well as illustrating the derivative as a linear operator.
 
 From first principles,
 
-$$\mathrm{d}f = f'(X)\mathrm{d}X,$$
+$$f'(X)\mathrm{d}X = \mathrm{d}f = f(X + \mathrm{d}X) - f(X).$$
 
-$$f'(X)\mathrm{d}X = f(X + \mathrm{d}X) - f(X).$$
-
-Next, we substitute our $f$ into the equation,
+Substitute our $f$ into the equation,
 
 $$f'(X)\mathrm{d}X = (X + \mathrm{d}X)^2 - X^2,$$
 
@@ -125,5 +159,23 @@ On the surface, it may appear as if we are in trouble! How are we going to repre
 
 $$f'(X)[\mathrm{d}X] = X \mathrm{d}X + \mathrm{d}X X.$$
 
-This subtle change in notation allows us to differentiate a far greater set of matrix functions.
+This subtle change in notation allows us to differentiate a far greater set of matrix functions. The formal name for this is the Fréchet derivative.
+
+## Vectorising Matrices
+
+One may recognise that an $m \times n$ matrix is isomorphic to an $mn$-vector, and indeed, there is a linear function for the aforementioned matrix to vector map. We call this the vectorising function, and with its aid, we can form Jacobian matrices in cases where previously we had to settle for linear operators. Let us define,
+
+$$\mathrm{vec} : \mathbb{R}^{m \times n} \rightarrow \mathbb{R}^{mn},$$
+
+such that,
+
+$$\mathrm{vec}\begin{pmatrix} A_11 & \dots & A_1n \\ \vdots & \ddots & \vdots \\ A_m1 & \dots & A_mn \end{pmatrix} = \begin{pmatrix} A_{11} & \dots & A_{m1} & \dots & A_{1n} & \dots & A_{mn} \end{pmatrix}^T.$$
+
+Using this new vec operator, we can actually construct a Jacobian matrix from the function $f(X) = X^2$.
+Let us take a $2 \times 2$ matrix $A = \big(\begin{smallmatrix} a & c\\ b & d \end{smallmatrix}\big)$.
+
+$$\mathrm{vec}A = \begin{pmatrix} a & b & c & d \end{pmatrix}^T,$$
+
+
+
 
