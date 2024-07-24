@@ -59,7 +59,9 @@ $$\mathrm{d}f_i = \frac{\partial f_i}{\partial x^j} \mathrm{d}x_j.$$
 
 Here, we have used Einstein summation notation. Converting this expression into a matrix-vector multiplication, we get
 
-$$\begin{pmatrix} \mathrm{d}f_1 \\ \vdots \\ \mathrm{d}f_m \end{pmatrix} = begin{pmatrix} \frac{\partial f_1}{\partial x^1} & \dots & \frac{\partial f_1}{\partial x^n} \\ \vdots & \ddots & \vdots \\ \frac{\partial f_m}{\partial x^1} & \dots & \frac{\partial f_m}{\partial x^n} \end{pmatrix} $$
+$$\begin{pmatrix} \mathrm{d}f_1 \\ \vdots \\ \mathrm{d}f_m \end{pmatrix} = $$
+
+$$\begin{pmatrix} \frac{\partial f_1}{\partial x^1} & \dots & \frac{\partial f_1}{\partial x^n} \\ \vdots & \ddots & \vdots \\ \frac{\partial f_m}{\partial x^1} & \dots & \frac{\partial f_m}{\partial x^n} \end{pmatrix} $$
 
 $$\begin{pmatrix} \mathrm{d}x_1 \\ \vdots \\ \mathrm{d}x_n \end{pmatrix}$$
 
