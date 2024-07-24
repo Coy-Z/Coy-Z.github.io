@@ -41,7 +41,9 @@ $$\mathrm{d}f = f'(x)\mathrm{d}x.$$
 We can recognise that this is effectively "multiplying up" the $\mathrm{d}x$ on both sides of our standard form for the single-variable derivative formula.
 Now, it is immediately apparent that this form of the derivative is far more generalised, because $\mathrm{d}x$ is not limited to $\mathbb{R}$. The above formula holds some genuine meaning in that $\mathrm{d}f$ represents a small output perturbation and $\mathrm{d}x$ a small input perturbation.
 
-We call $f'(x)$ the **Jacobian**. The Jacobian gives the relationship between input and output perturbations and is accurate the smaller the perturbations, since the $\mathcal{O}(\mid \delta x \mid ^2)$ terms become more and more negligible with respect to the first order.
+## The Jacobian
+
+We call $f'(x)$ the **Jacobian**. The Jacobian gives the relationship between input and output perturbations and is more accurate the smaller the perturbations, since the $\mathcal{O}(\mid \delta x \mid ^2)$ terms become more and more negligible with respect to the first order.
 
 Take, for example, some function $f$ such that,
 
@@ -51,7 +53,13 @@ i.e. $f$ is an m-vector and $x$ an n-vector. In this case, for the derivative fo
 
 $$f'(x) \in \mathbb{R}^{m \times n},$$
 
-and so in this example, $f'(x)$ is a matrix.
+and so in this example, $f'(x)$ is a matrix. But how can we construct a Jacobian matrix? We shall consult the total differential form relationship listed below, we use the same $f$ as above,
+
+$$\mathrm{d}f_i = \frac{\partial f_i}{\partial x^j} \mathrm{d}x_j.$$
+
+Here, we have used Einstein summation notation. Converting this expression into a matrix-vector multiplication, we get
+
+$$\begin{pmatrix} \mathrm{d}f_1 \\ \vdots \\ \mathrm{d}f_m \end{pmatrix} = begin{pmatrix} \frac{\partial f_1}{\partial x^1} & \dots & \frac{\partial f_1}{\partial x^n} \\ \vdots & \ddots & \vdots \\ \frac{\partial f_m}{\partial x^1} & \dots & \frac{\partial f_m}{\partial x^n} \end{pmatrix} \begin{pmatrix} \mathrm{d}x_1 \\ \vdots \\ \mathrm{d}x_n \end{pmatrix}$$
 
 Let us consider another example where $f : \mathbb{R}^n \rightarrow \mathbb{R}$. We call this kind of scalar function a **Loss**/**Cost** function in machine learning, since it takes in many parameters and returns a scalar that quantifies some sort of loss or cost.
 $$\mathrm{d}f = f'(x)\mathrm{d}x$$ tells us that $f'(x)$ must be a row-vector/covector. Using vector notation we can say,
