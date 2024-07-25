@@ -169,12 +169,16 @@ $$\mathrm{vec} : \mathbb{R}^{m \times n} \rightarrow \mathbb{R}^{mn},$$
 
 such that the column vectors within the matrix are stacked on top of eachother, i.e.
 
-$$\mathrm{vec}\begin{pmatrix} A_{11} & \dots & A_{1n} \\ \vdots & \ddots & \vdots \\ A_{m1} & \dots & A_{mn} \end{pmatrix} = \begin{pmatrix} A_{11} & \dots & A_{m1} & A_{12} & \dots & A_{m2} & \dots & A_{1n} & \dots & A_{mn} \end{pmatrix}^T.$$
+$$\mathrm{vec}\begin{pmatrix} a_{11} & \dots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{m1} & \dots & a_{mn} \end{pmatrix} = \begin{pmatrix} a_{11} & \dots & a_{m1} & a_{12} & \dots & a_{m2} & \dots & a_{1n} & \dots & a_{mn} \end{pmatrix}^T.$$
 
 Using this new vec operator, we can actually construct a Jacobian matrix from the function $f(X) = X^2$.
-Let us take a $2 \times 2$ matrix $A = \begin{pmatrix} a & c \\ b & d \end{pmatrix}$.
+Let us take a $2 \times 2$ matrix $A$, such that
 
-$$\mathrm{vec}A = \begin{pmatrix} a & b & c & d \end{pmatrix}^T,$$
+$$\mathrm{vec}A = \begin{pmatrix} a_{11} & a_{21} & a_{12} & a_{22} \end{pmatrix}^T.$$
+
+We shall observe the example of using $f(X) = X^2$,
+
+$$A^2 = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}^2 = \begin{pmatrix} a_{11}^2 + a_{12}a_{21} & a_{12}(a_{11}+a_{22}) \\ a_{21}(a_{11} + a_{22}) & a_{22}^2 + a_{12}a_{21} \end{pmatrix}.$$
 
 
 
