@@ -163,7 +163,7 @@ This subtle change in notation allows us to differentiate a far greater set of m
 
 ## Vectorising Matrices
 
-One may recognise that an $m \times n$ matrix is isomorphic to an $mn$-vector, and indeed, there is a linear function for the aforementioned matrix to vector map. We call this the vectorising function, and with its aid, we can form Jacobian matrices in cases where previously we had to settle for linear operators. Let us define,
+One may recognise that an $m \times n$ matrix is isomorphic to an $mn$-vector, and indeed, there is a linear operation for the aforementioned matrix to vector map. We call this the vectorising function, and with its aid, we can form Jacobian matrices in cases where previously we had to settle for linear operators. Let us define,
 
 $$\mathrm{vec} : \mathbb{R}^{m \times n} \rightarrow \mathbb{R}^{mn},$$
 
@@ -178,7 +178,13 @@ $$\mathrm{vec}A = \begin{pmatrix} a_{11} & a_{21} & a_{12} & a_{22} \end{pmatrix
 
 We shall observe the example of using $f(X) = X^2$,
 
-$$A^2 = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}^2 = \begin{pmatrix} a_{11}^2 + a_{12}a_{21} & a_{12}(a_{11}+a_{22}) \\ a_{21}(a_{11} + a_{22}) & a_{22}^2 + a_{12}a_{21} \end{pmatrix}.$$
+$$A^2 = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}^2 = \begin{pmatrix} a_{11}^2 + a_{12}a_{21} & a_{12}(a_{11}+a_{22}) \\ a_{21}(a_{11} + a_{22}) & a_{22}^2 + a_{12}a_{21} \end{pmatrix},$$
+
+$$(A+\mathrm{d}A)^2 = \begin{pmatrix} a_{11} + \mathrm{d}a_{11} & a_{12} + \mathrm{d}a_{12} \\ a_{21} + \mathrm{d}a_{21} & a_{22} + \mathrm{d}a_{22} \end{pmatrix}^2.$$
+
+Here, we skip some steps and give the final result (omitted steps left as an exercise for the reader).
+
+$$(A+\mathrm{d}A)^2 = $$
 
 
 
