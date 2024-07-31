@@ -182,9 +182,15 @@ $$A^2 = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}^2 = \be
 
 $$(A+\mathrm{d}A)^2 = \begin{pmatrix} a_{11} + \mathrm{d}a_{11} & a_{12} + \mathrm{d}a_{12} \\ a_{21} + \mathrm{d}a_{21} & a_{22} + \mathrm{d}a_{22} \end{pmatrix}^2.$$
 
-Here, we skip some steps and give the final result (omitted steps left as an exercise for the reader).
+Here, we skip some steps and give the final result (omitted steps left as an exercise for the reader... the exercise can be approached by matrix algebra or by differentiating the elements of the matrix).
 
-$$(A+\mathrm{d}A)^2 = $$
+$$\mathrm{d}A^2 = (A+\mathrm{d}A)^2 - A^2 = \begin{pmatrix} 2a_{11}\mathrm{d}a_{11} + a_{12}\mathrm{d}a_{21} + a_{21}\mathrm{d}a_{12} & (a_{11} + a_{22})\mathrm{d}a_{12} + a_{12}(\mathrm{d}a_{11} + \mathrm{d}a_{22}) \\ (a_{11} + a_{22})\mathrm{d}a_{21} + a_{21}(\mathrm{d}a_{11} + \mathrm{d}a_{22})& 2a_{22}\mathrm{d}a_{22} + a_{12}\mathrm{d}a_{21} + a_{21}\mathrm{d}a_12 \end{pmatrix}.$$
+
+Now, we will vectorise this matrix into,
+
+$$\mathrm{vec}(\mathrm{d}A^2) = \begin{pmatrix} 2a_{11}\mathrm{d}a_{11} + a_{12}\mathrm{d}a_{21} + a_{21}\mathrm{d}a_{12} \\ (a_{11} + a_{22})\mathrm{d}a_{21} + a_{21}(\mathrm{d}a_{11} + \mathrm{d}a_{22}) \\ (a_{11} + a_{22})\mathrm{d}a_{12} + a_{12}(\mathrm{d}a_{11} + \mathrm{d}a_{22}) \\ 2a_{22}\mathrm{d}a_{22} + a_{12}\mathrm{d}a_{21} + a_{21}\mathrm{d}a_12 \end{pmatrix}.$$
+
+
 
 
 
