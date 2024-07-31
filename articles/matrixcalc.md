@@ -190,6 +190,11 @@ Now, we will vectorise this matrix into,
 
 $$\mathrm{vec}(\mathrm{d}A^2) = \begin{pmatrix} 2a_{11}\mathrm{d}a_{11} + a_{12}\mathrm{d}a_{21} + a_{21}\mathrm{d}a_{12} \\ (a_{11} + a_{22})\mathrm{d}a_{21} + a_{21}(\mathrm{d}a_{11} + \mathrm{d}a_{22}) \\ (a_{11} + a_{22})\mathrm{d}a_{12} + a_{12}(\mathrm{d}a_{11} + \mathrm{d}a_{22}) \\ 2a_{22}\mathrm{d}a_{22} + a_{12}\mathrm{d}a_{21} + a_{21}\mathrm{d}a_12 \end{pmatrix}.$$
 
+We can now handily realise that this can be expressed as,
+
+$$\mathrm{vec}(\mathrm{d}A^2) = \begin{pmatrix} 2a_{11} & a_{12} & a_{21} & 0 \\ a_{21} & a_{11} + a_{22} & 0 & a_{21} \\ a_{12} & 0 & a_{11} + a_{22} & a_{12} \\ 0 & a_{12} & a_{21} & 2a_{22} \end{pmatrix} \mathrm{vec}(\mathrm{d}A),$$
+
+and hence, we now have an expression for the Jacobian!
 
 
 
