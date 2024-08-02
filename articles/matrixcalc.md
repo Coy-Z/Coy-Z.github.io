@@ -198,8 +198,21 @@ We can now handily realise that this can be expressed as,
 
 $$\mathrm{vec}(\mathrm{d}A^2) = \begin{pmatrix} 2a_{11} & a_{12} & a_{21} & 0 \\ a_{21} & a_{11} + a_{22} & 0 & a_{21} \\ a_{12} & 0 & a_{11} + a_{22} & a_{12} \\ 0 & a_{12} & a_{21} & 2a_{22} \end{pmatrix} \mathrm{vec}(\mathrm{d}A),$$
 
-and hence, we now have an expression for the Jacobian!
+and hence, we now have an expression for the Jacobian! 
 
+N.B. The vectorization approach should be used with care, as it encourages an element-centric mindset towards matrices, which often is not the best way to consider matrices.
+
+## Deriving General Differentiation Rules
+
+In regular scalar calculus, we are able to achieve such lengths in differentiation due to various rules that can be proved for general holomorphic functions. These rules are then rendered a toolkit for evaluating derivatives of greater complexity. In this section, we look at extending these rules into matrix calculus, alongside some matrix-specific rules.
+
+### Product Rule
+
+### Quotient Rule
+
+### Chain Rule
+
+### Inverse Rule
 
 
 
