@@ -19,7 +19,7 @@ You can download the raw C++ file <a href="/files/Donut.cpp" download>here</a>.
 However, the code is displayed below, with descriptive text added throughout. For a full rundown, the originator of this project wrote an <a href="https://www.a1k0n.net/2011/07/20/donut-math.html">article</a> describing the in-depth mathematics behind the donut. I used some of their pseudocode for inspiration.
 
 ## The Code
-~~~
+~~~cpp
 // This project aims to program a rotating torus animation using ascii characters.
 
 // Coy Zhu - 07/2024
@@ -42,7 +42,7 @@ R1 denotes the minor radius and R2 the major radius of the torus.
 z1 gives the distance to the center of the torus from the origin and z0 the distance from origin to the projecting screen.
 
 I also define a data structure to make for ease of data transfer between functions later.
-~~~
+~~~cpp
 #define screen_width 100
 #define screen_height 100
 #define R1 1
@@ -61,7 +61,7 @@ struct vector_scalar {
 The projection works as per the diagram shown below. We store the reciprocal of z so to determine the distance of the point from the origin. Later, we will compare the reciprocal of z to determine whether to display a pixel or not. r1 represents the coordinates on the projected screen.
 
 <img src="/files/perspective.png" alt="" width="400" height="200">
-~~~
+~~~cpp
 // Define projection function
 vector_scalar point_projection(double x, double y, double z) {
 	double X, Y, ooz;
@@ -77,7 +77,7 @@ vector_scalar point_projection(double x, double y, double z) {
 }
 ~~~
 I define the pixel positions for the surface of the torus. The expressions were determined using matrix multiplications of several rotation matrices and the locus of one single cross-sectional circle of the torus.
-~~~
+~~~cpp
 // Define the pixel function
 std::vector<double> position(double theta, double phi, double A, double B) {
 	double X, Y, Z;
@@ -104,7 +104,7 @@ std::vector<double> position(double theta, double phi, double A, double B) {
 }
 ~~~
 The illumination index is defined similarly to the pixel positions but instead the matrices are used to find the normal surface vectors. Then, we dot the surface vectors with the light source direction to calculate an index.
-~~~
+~~~cpp
 // Illumination
 double illumination(double theta, double phi, double A, double B) {
 	double Nx, Ny, Nz, L;
@@ -136,7 +136,7 @@ double illumination(double theta, double phi, double A, double B) {
 }
 ~~~
 Here, we form a large 2D array to represent each pixel on the projected screen, and calculate what ascii character to display at each pixel, given the reciprocal of z and the illumination index. The frame is then displayed by printing into console, and then clearing the display, followed by reprinting.
-~~~
+~~~cpp
 // Frame Rendering
 void frame(double A, double B) {
 	// Local variable declarations
@@ -190,7 +190,7 @@ void frame(double A, double B) {
 }
 ~~~
 The main loop increments A and B for the animation movement, and adds a sleep timer.
-~~~
+~~~cpp
 // Main
 int main() {
 	double A, B;
