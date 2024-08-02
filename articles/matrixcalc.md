@@ -171,7 +171,7 @@ such that the column vectors within the matrix are stacked on top of eachother, 
 
 $$\mathrm{vec}\begin{pmatrix} a_{11} & \dots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{m1} & \dots & a_{mn} \end{pmatrix} = \begin{pmatrix} a_{11} \\ \vdots \\ a_{m1} \\ a_{12} \\ \vdots \\ a_{m2} \\ \vdots \\ a_{1n} \\ \vdots \\ a_{mn} \end{pmatrix}.$$
 
-$$\mathrm{vec}\begin{pmatrix} \uparrow & \dots & \uparrow \\ u_1 & \dots & u_n \\ \downarrow & \dots & \downarrow \end{pmatrix} = \begin{pmatrix} \uparrow \\ u_1 \\ \downarrow \\ \uparrow \\ \vdots \\ \downarrow \\ \uparrow \\ u_n \\ \downarrow \end{pmatrix}.$$
+$$\mathrm{vec}\begin{pmatrix} \uparrow & \dots & \uparrow \\ u_1 & \dots & u_n \\ \downarrow & \dots & \downarrow \end{pmatrix} = \begin{pmatrix} \uparrow \\ u_1 \\ \downarrow \\ \vdots \\ \uparrow \\ u_n \\ \downarrow \end{pmatrix}.$$
 
 Using this new vec operator, we can actually construct a Jacobian matrix from the function $f(X) = X^2$.
 Let us take a $2 \times 2$ matrix $A$, such that
