@@ -204,16 +204,61 @@ N.B. The vectorization approach should be used with care, as it encourages an el
 
 ## Deriving General Differentiation Rules
 
-In regular scalar calculus, we are able to achieve such lengths in differentiation due to various rules that can be proved for general holomorphic functions. These rules are then rendered a toolkit for evaluating derivatives of greater complexity. In this section, we look at extending these rules into matrix calculus, alongside some matrix-specific rules.
+In regular scalar calculus, we are able to achieve such lengths in differentiation due to various rules that can be proved for general holomorphic functions. These rules are then rendered a toolkit for evaluating derivatives of greater complexity. In this section, we look at extending these rules into matrix calculus, alongside some matrix-specific rules. You should expect to notice that all of these rules are valid when we take $1 \times 1$ matrices, i.e. scalars.
+### Sum Rule
+
+Let is begin with $f(x) = g(x) + h(x)$ where $f,g$ and $h$ take matrix input and outputs. Starting from first principles,
+
+$$\mathrm{d}f = f(x + \mathrm{d}x) - f(x) = g(x + \mathrm{d}x) + h(x + \mathrm{d}x) - g(x) - h(x).$$
+
+Matrix addition is commutative, so the sum on the right hand side can be trivially rearranged,
+
+$$\mathrm{d}f = g(x + \mathrm{d}x) - g(x) + h(x + \mathrm{d}x) - h(x),$$
+
+$$\therefore \mathrm{d}(g+h) = \mathrm{d}g + \mathrm{d}h.$$
 
 ### Product Rule
 
-### Quotient Rule
+For the product rule, let $f(x) = g(x)h(x)$, where $f,g$ and $h$ are defined similarly. Adopting the same approach,
+
+$$\mathrm{d}f = (f + \mathrm{d}f) - f = (g+\mathrm{d}g)(h+\mathrm{d}h) - gh.$$
+
+The key is to preserve the order of matrix multiplication. Expanding the above equation and discarding second-order terms, we acquire
+
+$$\mathrm{d}f = g\mathrm{d}h + \mathrm{d}gh.$$
+
+$$\therefore \mathrm{d}(gh) = g\mathrm{d}h + \mathrm{d}gh.$$
 
 ### Chain Rule
 
+To tackle the chain rule, we define $f(x) = h(g(x))$, such that $g$ acts on $x$ first, then followed by $h$. To cement this, we could apply an example (however the proof below is general beyond the example). Let $x \in \mathbb{R}^n$, $g: \mathbb{R}^n \rightarrow \mathbb{R}^m$, $h: \mathbb{R}^m \rightarrow \mathbb{R}^k$ and $f: \mathbb{R}^n \rightarrow \mathbb{R}^k$.
+
+$$\mathrm{d}f = h(g(x+\mathrm{d}x)) - h(g(x)),$$
+
+$$\mathrm{d}f = h(g+g'(x)\mathrm{d}x) - h(g(x)).$$
+
+The observation we must make here is that $\mathrm{d}g = g'(x)\mathrm{d}x$ is still an infinitesimal.
+
+$$\mathrm{d}f = h(g(x)) + h'(g(x))\mathrm{d}g - h(g(x)) = h'(g(x))g'(x)\mathrm{d}x.$$
+
+$$\therefore f'(x) = h'(g(x))g'(x).$$
+
+The example at the start of this section was not chosen blindly. It illustrates the composition of several vector-to-vector functions. You will notice, $h'(g(x))$ is just the Jacobian of $h$ evaluated at $g(x)$, and $g'(x)$ is just the Jacobian of $g$ evaluated at $x$. In short, the chain rule for vector-to-vector functions is simply the product of Jacobians. Computationally, when chains and vectors get long, it makes a massive difference which way we perform the matrix multiplication (left-to-right or right-to-left). We will discuss this in much further depth later on in this article.
+
 ### Inverse Rule
 
+This rule is obviously a matrix specific rule, or is it? We will see. Let $f(X) = X^{-1}$, where $X$ is a matrix. We will employ a trick to evaluate this derivative.
 
+$$X X^{-1} = I,$$
+
+where $I$ is the identity matrix. This is a constant matrix, and so will have a derivative of $0$.
+
+$$\implies \mathrm{d}(XX^{-1}) = 0,$$
+
+$$X\mathrm{d}X^{-1} + \mathrm{d}XX^-1 = 0,$$
+
+$$X\mathrm{d}X^{-1} = -\mathrm{d}XX^-1,$$
+
+$$\therefore \mathrm{d}X^{-1} = -X^-1\mathrm{d}XX^-1.$$
 
 
