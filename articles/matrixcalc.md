@@ -253,12 +253,18 @@ $$X X^{-1} = I,$$
 
 where $I$ is the identity matrix. This is a constant matrix, and so will have a derivative of $0$.
 
-$$\implies \mathrm{d}(XX^{-1}) = 0,$$
+$$\implies \mathrm{d}(XX^{-1}) = 0.$$
 
-$$X\mathrm{d}X^{-1} + \mathrm{d}XX^-1 = 0,$$
+Applying the product rule,
 
-$$X\mathrm{d}X^{-1} = -\mathrm{d}XX^-1,$$
+$$X\mathrm{d}X^{-1} + \mathrm{d}XX^{-1} = 0,$$
 
-$$\therefore \mathrm{d}X^{-1} = -X^-1\mathrm{d}XX^-1.$$
+$$X\mathrm{d}X^{-1} = -\mathrm{d}XX^{-1},$$
+
+$$\therefore \mathrm{d}X^{-1} = -X^{-1}\mathrm{d}XX^{-1}.$$
+
+So let's see if it really is matrix specific. Suppose $X$ were a scalar, the scalar identity is just 1 and so $X^{-1}$ is just the reciprocal of $X$, so
+
+$$-X^{-1}\mathrm{d}XX^{-1} = -\frac{\mathrm{d}X}{X^2}.$$
 
 
