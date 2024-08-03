@@ -265,6 +265,10 @@ $$\therefore \mathrm{d}X^{-1} = -X^{-1}\mathrm{d}XX^{-1}.$$
 
 So let's see if it really is matrix specific. Suppose $X$ were a scalar, the scalar identity is just 1 and so $X^{-1}$ is just the reciprocal of $X$, so
 
-$$-X^{-1}\mathrm{d}XX^{-1} = -\frac{\mathrm{d}X}{X^2}.$$
+$$\mathrm{d}X^{-1} = -X^{-1}\mathrm{d}XX^{-1} = -\frac{\mathrm{d}X}{X^2},$$
 
+and
 
+$$\frac{\mathrm{d}X^{-1}}{\mathrm{d}X} = -\frac{1}{X^2},$$
+
+which is the expected result.
