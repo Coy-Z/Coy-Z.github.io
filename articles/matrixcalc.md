@@ -43,7 +43,7 @@ Now, it is immediately apparent that this form of the derivative is far more gen
 
 ## The Jacobian
 
-We call $f'(x)$ the **Jacobian**. The Jacobian gives the relationship between input and output perturbations and is more accurate the smaller the perturbations, since the $\mathcal{O}(\mid \delta x \mid ^2)$ terms become more and more negligible with respect to the first order.
+We call $f'(x)$ the **Jacobian**. The Jacobian gives the linear relationship between input and output perturbations, which is more accurate the smaller the perturbations, since the $\mathcal{O}(\mid \delta x \mid ^2)$ terms become more and more negligible with respect to the first order.
 
 Take, for example, some function $f$ such that,
 
@@ -108,7 +108,7 @@ $$\mathrm{d}f = f'(x)^T \cdot \mathrm{d}x.$$
 
 From the equation for the total derivative, we can recall that for some scalar field $f : \mathbb{R}^n \rightarrow \mathbb{R}$ (using Einstein summation convention),
 
-$$\mathrm{d}f = \frac{\partial f}{\partial x^i} \mathrm{d}x_i = \nabla f \cdot \mathrm{d}r.$$
+$$\mathrm{d}f = \frac{\partial f}{\partial x^i} \mathrm{d}x_i = \nabla f \cdot \mathrm{d}x.$$
 
 Comparing the two equations above,
 
@@ -176,7 +176,11 @@ $$\mathrm{vec}\begin{pmatrix} \uparrow & \dots & \uparrow \\ u_1 & \dots & u_n \
 where $u_i$ represents the $i$-th column vector in the matrix. Using this new vec operator, we can actually construct a Jacobian matrix from the function $f(X) = X^2$.
 Let us take a $2 \times 2$ matrix $A$, such that
 
-$$\mathrm{vec}A = \begin{pmatrix} a_{11} & a_{21} & a_{12} & a_{22} \end{pmatrix}^T.$$
+$$A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix},$$
+
+and we match to it some small perturbation,
+
+$$\mathrm{d}A = \begin{pmatrix} \mathrm{d}a_{11} & \mathrm{d}a_{12} \\ \mathrm{d}a_{21} & \mathrm{d}a_{22} \end{pmatrix}.$$
 
 We shall observe the example of using $f(X) = X^2$,
 
@@ -190,15 +194,15 @@ $$\mathrm{d}A^2 = (A+\mathrm{d}A)^2 - A^2$$
 
 $$ = \begin{pmatrix} 2a_{11}\mathrm{d}a_{11} + a_{12}\mathrm{d}a_{21} + a_{21}\mathrm{d}a_{12} & (a_{11} + a_{22})\mathrm{d}a_{12} + a_{12}(\mathrm{d}a_{11} + \mathrm{d}a_{22}) \\ (a_{11} + a_{22})\mathrm{d}a_{21} + a_{21}(\mathrm{d}a_{11} + \mathrm{d}a_{22})& 2a_{22}\mathrm{d}a_{22} + a_{12}\mathrm{d}a_{21} + a_{21}\mathrm{d}a_12 \end{pmatrix}.$$
 
-Now, we will vectorise this matrix into,
+We vectorise this matrix into,
 
 $$\mathrm{vec}(\mathrm{d}A^2) = \begin{pmatrix} 2a_{11}\mathrm{d}a_{11} + a_{12}\mathrm{d}a_{21} + a_{21}\mathrm{d}a_{12} \\ (a_{11} + a_{22})\mathrm{d}a_{21} + a_{21}(\mathrm{d}a_{11} + \mathrm{d}a_{22}) \\ (a_{11} + a_{22})\mathrm{d}a_{12} + a_{12}(\mathrm{d}a_{11} + \mathrm{d}a_{22}) \\ 2a_{22}\mathrm{d}a_{22} + a_{12}\mathrm{d}a_{21} + a_{21}\mathrm{d}a_12 \end{pmatrix}.$$
 
-We can now handily realise that this can be expressed as,
+Now, it is handy to realise that this can be expressed as,
 
 $$\mathrm{vec}(\mathrm{d}A^2) = \begin{pmatrix} 2a_{11} & a_{12} & a_{21} & 0 \\ a_{21} & a_{11} + a_{22} & 0 & a_{21} \\ a_{12} & 0 & a_{11} + a_{22} & a_{12} \\ 0 & a_{12} & a_{21} & 2a_{22} \end{pmatrix} \mathrm{vec}(\mathrm{d}A),$$
 
-and hence, we now have an expression for the Jacobian! 
+and hence, we have acquired an expression for the Jacobian! 
 
 N.B. The vectorization approach should be used with care, as it encourages an element-centric mindset towards matrices, which often is not the best way to consider matrices.
 
@@ -235,9 +239,9 @@ To tackle the chain rule, we define $f(x) = h(g(x))$, such that $g$ acts on $x$ 
 
 $$\mathrm{d}f = h(g(x+\mathrm{d}x)) - h(g(x)),$$
 
-$$\mathrm{d}f = h(g+g'(x)\mathrm{d}x) - h(g(x)).$$
+$$\mathrm{d}f = h(g+\mathrm{d}g) - h(g(x)).$$
 
-The observation we must make here is that $\mathrm{d}g = g'(x)\mathrm{d}x$ is still an infinitesimal.
+The observation we must make here is that $\mathrm{d}g = g'(x)\mathrm{d}x$ is still an infinitesimal. The way to consider the following step is to think of $h'(g(x))$ as the derivative of $h$ evaluated at a point $g(x)$ in $g$-space.
 
 $$\mathrm{d}f = h(g(x)) + h'(g(x))\mathrm{d}g - h(g(x)) = h'(g(x))g'(x)\mathrm{d}x.$$
 
