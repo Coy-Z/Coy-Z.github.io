@@ -300,3 +300,5 @@ $$|\vec{a}| = \sqrt{a_i^2} = \sqrt{\vec{a} \cdot \vec{a}}.$$
 Again, we make the obvious generalisation and define the Frobenius Norm (also known as the 2-norm) as,
 
 $$|A| = \sqrt{\langle A, A \rangle} = \sqrt{\mathrm{tr}(A^TA)} = \sqrt{A_{ij}^2}.$$
+
+A vector space with a defined norm is formally known as a **Banal** space. Note, in our chosen definition, the two spaces come together, but this is not generally true. Therefore, it is important to make the distinction here.
