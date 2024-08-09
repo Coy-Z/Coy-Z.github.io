@@ -276,3 +276,28 @@ and
 $$\frac{\mathrm{d}X^{-1}}{\mathrm{d}X} = -\frac{1}{X^2},$$
 
 which is the expected result.
+
+# Defining an Inner Product and Norm
+
+To define an inner product, we will make use of the matrix-vector isomorphism. Specifically, the spaces of $R^{m\times n}$ and $R^{mn}$ via the vectorising function. For the vectors formed by vectorising matrices $A$ and $B$,
+
+$$\mathrm{vec}A \cdot \mathrm{vec}B = (\mathrm{vec}A)^T\mathrm{vec}B.$$
+
+But, without using the vectorising function,
+
+$$(\mathrm{vec}A)^T\mathrm{vec}B = A_{ij}B_{ij} = \mathrm{tr}(A^TB).$$
+
+The most obvious generalisation is to say $\langle A, B \rangle = \mathrm{vec}A \cdot \mathrm{vec}B$. This is called the Frobenius Inner Product, and is defined,
+
+$$\langle A, B \rangle = \mathrm{tr}(A^TB) = A_{ij}B_{ij}.$$
+
+In essence, this is just multiplying corresponding elements from $A$ and $B$, then summing the products, which is again very intuitive. A vector space with a defined inner product is formally known as a **Hilbert** space.
+
+Following on from the inner product, in vectors, we can define the norm of a vector as,
+
+$$|\vec{a}| = \sqrt{\vec{a} \cdot \vec{a}}.$$
+
+Again, we make the obvious generalisation and define the Frobenius Norm as,
+
+$$|A| = \sqrt{\langle A, A \rangle} = \sqrt{\mathrm{tr}(A^TA)} = \sqrt{A_{ij}^2}.$$
+
