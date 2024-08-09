@@ -293,11 +293,10 @@ $$\langle A, B \rangle = \mathrm{tr}(A^TB) = A_{ij}B_{ij}.$$
 
 In essence, this is just multiplying corresponding elements from $A$ and $B$, then summing the products, which is again very intuitive. A vector space with a defined inner product is formally known as a **Hilbert** space.
 
-Following on from the inner product, in vectors, we can define the norm of a vector as,
+Following on from the inner product, in vectors, we can define the norm of a vector as its length, which is given by
 
-$$|\vec{a}| = \sqrt{\vec{a} \cdot \vec{a}}.$$
+$$|\vec{a}| = \sqrt{a_i^2} = \sqrt{\vec{a} \cdot \vec{a}}.$$
 
-Again, we make the obvious generalisation and define the Frobenius Norm as,
+Again, we make the obvious generalisation and define the Frobenius Norm (also known as the 2-norm) as,
 
 $$|A| = \sqrt{\langle A, A \rangle} = \sqrt{\mathrm{tr}(A^TA)} = \sqrt{A_{ij}^2}.$$
-
