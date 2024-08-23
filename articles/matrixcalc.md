@@ -6,7 +6,7 @@ permalink: /articles/matrixcalc/
 
 # Matrix Calculus
 
-In this article, I do not use any specifying notation for vectors for sake of generality.
+In this article, I may not use any specifying notation for vectors for sake of generality.
 
 ## Introduction to Differentials and Linearisation
 
@@ -277,7 +277,7 @@ $$\frac{\mathrm{d}X^{-1}}{\mathrm{d}X} = -\frac{1}{X^2},$$
 
 which is the expected result.
 
-# Defining an Inner Product and Norm
+## Defining an Inner Product and Norm
 
 To define an inner product, we will make use of the matrix-vector isomorphism. Specifically, the spaces of $R^{m\times n}$ and $R^{mn}$ via the vectorising function. For the vectors formed by vectorising matrices $A$ and $B$,
 
