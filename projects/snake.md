@@ -19,6 +19,7 @@ The "apple" class is just a wrapped vector containing the position, with several
 The GLUT rendering is pretty simple, and different scenes are programmed by simple conditional statements of global variables. In professional game dev, scenes are coded as a classes, and an overarching scene manager class must also be constructed. Overall, I deemed this unreasonable for such a simple game as snake, with only 2 scenes.
 
 ## The Header File
+
 ~~~cpp
 #pragma once
 
