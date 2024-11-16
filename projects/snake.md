@@ -6,7 +6,7 @@ permalink: /projects/snake/
 
 # Snake
 
-This project can be found on my <a href="https://github.com/Coy-Z/Snake_Game">GitHub</a></li>.
+This project can be found on my <a href="https://github.com/Coy-Z/Snake_Game">GitHub</a>.
 
 The overall idea is pretty simple. The "snake" is really just a std::deque containing positions (stored as std::vector) occupied by the snake, from head to tail. The snake moves by the push_front and pop_back member functions of the std::deque class. In other words, for each step, the next position of the snake is calculated and inserted in the front of the deque, and the end position (end of the tail) is removed.The std::deque class means that the insertion and deletion operations I have used here are O(1).
 
