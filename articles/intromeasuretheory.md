@@ -24,7 +24,7 @@ By De Morgan's Law, this also implies it is closed under countable intersections
 
 By the closed under countable unions condition,
 $$
-\left{ \mathcal{A}_i \in \mathcal{F} \right} \implies \bigcup _i \mathcal{A}_i \in \mathcal{F}.
+\{ \mathcal{A}_i \in \mathcal{F} \} \implies \bigcup _i \mathcal{A}_i \in \mathcal{F}.
 $$
 By the closed under complement condition,
 $$
@@ -41,7 +41,7 @@ $$
 $$
 \therefore \mathcal{B}_i \in \mathcal{F} \implies \bigcap _i \mathcal{B}_i \in \mathcal{F}.
 $$
-$$\qed$$
+$$\square$$
 
 A way of gaining intuition for the $\sigma$-algebra is via a game of coin toss. Let us toss the coin twice, with $H, T$ representing heads and tails respectively. Say we only care about the number of heads (i.e. combinations rather than permutations), then our probability distribution $\left( \Omega, \mathcal{F}, \mu \right)$ is characterised as follows,
 $$
@@ -66,8 +66,8 @@ $$
 \mu : \Omega \rightarrow \left[0, \infty \right].
 $$
 Take note that the infinity is bounded. This is a subtle but important point to be clarified later. The measure must satisfy the following two conditions,
-1. $$ \mu\left( \empty \right) = 0 $$.
-2. $$ \mu\left( \bigcup _i \mathcal{A}_i \right) = \sum _i \mu\left( \mathcal{A}_i \right) \forall \mathtext{disjoint} \mathcal{A}_i \in \mathcal{F} $$.
+1. $$ \mu\left( \emptyset \right) = 0 $$.
+2. $$ \mu\left( \bigcup _i \mathcal{A}_i \right) = \sum _i \mu\left( \mathcal{A}_i \right) \forall \, \mathrm{disjoint} \, \mathcal{A}_i \in \mathcal{F} $$.
 For probability measures, there are further more stringent conditions, namely the Kolmogorov axioms, that must be satisfied.
 3. $$\mu\left( \Omega \right) = 1 $$.
 4. $$\mu\left( \Omega \right) \in \left[ 0, 1 \right] $$.
