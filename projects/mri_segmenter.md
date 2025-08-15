@@ -41,13 +41,13 @@ In step 4, we add a combination of Gaussian white noise and correlated noise (sa
 
 We reserve real segmented MRI data for the validation set.
 
-![Aorta](files/mri_segmenter/aorta.png)
+![Aorta](/files/mri_segmenter/aorta.png)
 *Figure 1: This is a slice of the Aorta density scan.*
 
-![Carotid](files/mri_segmenter/carotid.png)
+![Carotid](/files/mri_segmenter/carotid.png)
 *Figure 2: This is a slice of the Carotid density scan.*
 
-![Artificial](files/mri_segmenter/artificial_data.png)
+![Artificial](/files/mri_segmenter/artificial_data.png)
 *Figure 3: This is a slice of the artificially generated density scan. The white lines overlayed on the magnitude scan are Signed Distance Field contours.*
 
 Note: The real MRI data is not yet publicly available.
