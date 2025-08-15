@@ -18,12 +18,12 @@ In the above, $\Omega$ is the sample space: the set of all possible outcomes. $\
 
 The $\sigma$-algebra $\mathcal{F}$ over a set $\Omega$ is a collection of subsets of $\Omega$ satisfying:
 1. Contains the whole set: $\Omega \in \mathcal{F}$.
-2. Closed under complement: $\mathcal{A} \in \mathcal{F} \implies \Omega \ \mathcal{A} \in \mathcal{F}$.
+2. Closed under complement: $\mathcal{A} \in \mathcal{F} \implies \Omega \backslash \mathcal{A} \in \mathcal{F}$.
 3. Closed under countable unions: $\mathcal{A}_i \in \mathcal{F} \implies \bigcup _i \mathcal{A}_i \in \mathcal{F}$.
 
 By De Morgan's Law, this also implies it is closed under countable intersections.
 
-*Proof*    De Morgan's law states that $\bar{\mathcal{A}} \cap \bar{\mathcal{B}} = \bar{\mathcal{A} \cap \mathcal{B}}$, where we define the complement $\bar{\mathcal{A}} \equiv \Omega / \mathcal{A}$.
+*Proof*    De Morgan's law states that $\bar{\mathcal{A}} \cap \bar{\mathcal{B}} = \bar{\mathcal{A} \cap \mathcal{B}}$, where we define the complement $\bar{\mathcal{A}} \equiv \Omega \backslash \mathcal{A}$.
 
 By the closed under countable unions condition,
 
@@ -40,10 +40,10 @@ $$
 By De Morgan's Law,
 
 $$
-\bigcap _i \left( \Omega \ \mathcal{A}_i \right) \in \mathcal{F}
+\bigcap _i \left( \Omega \backslash \mathcal{A}_i \right) \in \mathcal{F}
 $$
 
-Let $\mathcal{B}_i \equiv \Omega \ \mathcal{A}_i$, and apply the closed under complement condition,
+Let $\mathcal{B}_i \equiv \Omega \backslasn \mathcal{A}_i$, and apply the closed under complement condition,
 
 $$
 \mathcal{A}_i \in \mathcal{F} \implies \mathcal{B}_i \in \mathcal{F},\\
