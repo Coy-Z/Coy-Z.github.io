@@ -23,12 +23,12 @@ The $\sigma$-algebra $\mathcal{F}$ over a set $\Omega$ is a collection of subset
 
 By De Morgan's Law, this also implies it is closed under countable intersections.
 
-*Proof*    De Morgan's law states that $\bar{\mathcal{A}} \cap \bar{\mathcal{B}} = \bar{\mathcal{A} \cap \mathcal{B}}$, where we define the complement $\bar{\mathcal{A}} \equiv \Omega \backslash \mathcal{A}$.
+*Proof* De Morgan's law states that $\bar{\mathcal{A}} \cap \bar{\mathcal{B}} = \bar{\mathcal{A} \cap \mathcal{B}}$, where we define the complement $\bar{\mathcal{A}} \equiv \Omega \backslash \mathcal{A}$.
 
 By the closed under countable unions condition,
 
 $$
-\{ \mathcal{A}_i \in \mathcal{F} \} \implies \bigcup _i \mathcal{A}_i \in \mathcal{F}.
+\mathcal{A}_i \in \mathcal{F} \implies \bigcup _i \mathcal{A}_i \in \mathcal{F}.
 $$
 
 By the closed under complement condition,
@@ -47,7 +47,7 @@ Let $\mathcal{B}_i \equiv \Omega \backslasn \mathcal{A}_i$, and apply the closed
 
 $$
 \mathcal{A}_i \in \mathcal{F} \implies \mathcal{B}_i \in \mathcal{F},\\
-\therefore \mathcal{B}_i \in \mathcal{F} \implies \bigcap _i \mathcal{B}_i \in \mathcal{F}.\
+\therefore \mathcal{B}_i \in \mathcal{F} \implies \bigcap _i \mathcal{B}_i \in \mathcal{F}.\\
 \square$$
 
 A way of gaining intuition for the $\sigma$-algebra is via a game of coin toss. Let us toss the coin twice, with $H, T$ representing heads and tails respectively. Say we only care about the number of heads (i.e. combinations rather than permutations), then our probability distribution $\left( \Omega, \mathcal{F}, \mu \right)$ is characterised as follows,
@@ -66,7 +66,7 @@ $$
    \end{cases}.
 $$
 
-In the case where we do indeed care about permutations, we get $\mathcal{F} = \{ TT, TH, HT, HH \}$, which is called the Borel $\sigma$-algebra, defined to be the smallest σ-algebra containing all open sets of $\Omega$.
+In the case where we do indeed care about permutations, we get $\mathcal{F} = \left\{ TT, TH, HT, HH \right\}$, which is called the Borel $\sigma$-algebra, defined to be the smallest σ-algebra containing all open sets of $\Omega$.
 
 ## What is a measure?
 
