@@ -105,7 +105,7 @@ $$
 \varphi = \sum _{i = 1}^n a_i \mathbb{1}_{\mathcal{A}_i}\left( x \right),
 $$
 
-where $a_i \geq 0$, $mathcal{A}_i \in \mathcal{F}$ are disjoint sets that span the sample space and $\mathbb{1}_{\mathcal{A}_i}(\dot)$ is the indicator function for the set $\mathcal{A}_i$.
+where $a_i \geq 0$ and $mathcal{A}_i \in \mathcal{F}$ are disjoint sets that span the sample space and $\mathbb{1}_{\mathcal{A}_i}(\dot)$ is the indicator function for the set $\mathcal{A}_i$.
 Following this concept, we define its integral as,
 
 $$
