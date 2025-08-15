@@ -79,7 +79,6 @@ $$
 $$
 
 Take note that the infinity is bounded. This is a subtle but important point to be clarified later. The measure must satisfy the following two conditions,
-
 1. $$ \mu\left( \emptyset \right) = 0 $$.
 2. $$ \mu\left( \bigcup _i \mathcal{A}_i \right) = \sum _i \mu\left( \mathcal{A}_i \right) \forall \, \mathrm{disjoint} \, \mathcal{A}_i \in \mathcal{F} $$.
 
