@@ -102,10 +102,12 @@ We are used to taking the Riemann integral, since this works well with the notio
 A simple function, $\varphi$, is a measurable function that takes only finitely many values, i.e.
 
 $$
-\varphi = \sum _{i = 1}^n a_i \mathds{1}_{\mathcal{A}_i}\left( x \right),
+\varphi = \sum _{i = 1}^n a_i \mathbb{1}_{\mathcal{A}_i}\left( x \right),
 $$
 
-where $a_i \geq 0$ and $\mathcal{A}_i \in \mathcal{F}$ are disjoint sets that span the sample space and $\mathds{1}_{\mathcal{A}_i}(\dot)$ is the indicator function for the set $\mathcal{A}_i$.
+where $a_i \geq 0$ and
+$\mathcal{A}_i \in \mathcal{F}$ are disjoint sets that span the sample space and 
+$\mathbb{1}_{\mathcal{A}_i}(\dot)$ is the indicator function for the set $\mathcal{A}_i$.
 Following this concept, we define its integral as,
 
 $$
