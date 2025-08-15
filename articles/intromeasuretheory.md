@@ -4,7 +4,7 @@ title: Introduction to Measure Theory
 permalink: /articles/intromeasuretheory/
 ---
 
-# An Introduction to Measure Theory -- With a focus on Probability
+# An Introduction to Measure Theory \\ *With a focus on Probability*
 
 Measure theory is a branch of mathematics that generalizes the intuitive notions of length, area, and volume to more abstract settings. It provides a rigorous framework for defining and working with measures, which are functions that assign a "size" or "weight" to subsets of a given space. These measures can represent various quantities like length, area, volume, probability, or even "mass" in a generalized sense. We shall approach it with a probabilistic lens in this article.
 
