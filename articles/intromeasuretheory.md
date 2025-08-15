@@ -86,7 +86,7 @@ For probability measures, there are further more stringent conditions, namely th
 
 3. $$\mu\left( \Omega \right) = 1 $$.
 4. $$\mu\left( \Omega \right) \in \left[ 0, 1 \right] $$.
-5. $$\mathcal{A} \subset \mathcal{B} \implies \mu\left( \mathcal{A} \right) \leq \mu\left( \mathcal{B} \right) $$.
+5. $$\mathcal{A} \subseteq \mathcal{B} \implies \mu\left( \mathcal{A} \right) \leq \mu\left( \mathcal{B} \right) $$.
 
 ## Integration Theory
 
