@@ -22,6 +22,48 @@ The $\sigma$-algebra $\mathcal{F}$ over a set $\Omega$ is a collection of subset
 2. Closed under complement: $\mathcal{A} \in \mathcal{F} \implies \Omega \ \mathcal{A} \in \mathcal{F}$.
 3. Closed under countable unions: $\mathcal{A}_i \in \mathcal{F} \implies \bigcup _i \mathcal{A}_i \in \mathcal{F}$.
 
-By De Morgan's laws, this also implies it is closed under countable intersections.
+By De Morgan's Law, this also implies it is closed under countable intersections.
 
-*Proof* D.M. states $\bar{\mathcal{A}} \cap \bar{\mathcal{B}} = \bar{\mathcal{A} \cap \mathcal{B}}$, where we define the complement $\bar{\mathcal{A}} \identity \Omega / \mathcal{A}$.
+*Proof*    De Morgan's law states that $\bar{\mathcal{A}} \cap \bar{\mathcal{B}} = \bar{\mathcal{A} \cap \mathcal{B}}$, where we define the complement $\bar{\mathcal{A}} \equiv \Omega / \mathcal{A}$.
+
+By the closed under countable unions condition,
+$$
+\left{ \mathcal{A}_i \in \mathcal{F} \right} \implies \bigcup _i \mathcal{A}_i \in \mathcal{F}.
+$$
+By the closed under complement condition,
+$$
+\Omega \ \bigcup _i \mathcal{A}_i \in \mathcal{F}
+$$
+By De Morgan's Law,
+$$
+\bigcap _i \left( \Omega \ \mathcal{A}_i \right) \in \mathcal{F}
+$$
+Let $\mathcal{B}_i \equiv \Omega \ \mathcal{A}_i$, and apply the closed under complement condition,
+$$
+$\mathcal{A}_i \in \mathcal{F} \implies \mathcal{B}_i \in \mathcal{F}$
+$$
+$$
+\therefore \mathcal{B}_i \in \mathcal{F} \implies \bigcap _i \mathcal{B}_i \in \mathcal{F}.
+$$
+$$\qed$$
+
+## What is a measure?
+
+A measure is a function that assigns a non-negative number to subsets of a set, generalizing the notion of length, are, volume, mass and probability.
+
+Given a measurable (Borel) space $\left( \Omega, \mathcal{F} \right)$ (sample space, $\sigma$-algebra), a measure, $\mu$, is defined as
+
+$$
+\mu : \Omega \rightarrow \left[0, \infty \right].
+$$
+
+Take note that the infinity is bounded. This is a subtle but important point to be clarified later. The measure must satisfy the following two conditions,
+
+1. $$ \mu\left( \empty \right) = 0 $$.
+2. $$ \mu\left( \bigcup _i \mathcal{A}_i \right) = \sum _i \mu\left( \mathcal{A}_i \right) \forall \mathtext{disjoint} \mathcal{A}_i \in \mathcal{F} $$.
+
+For probability measures, there are further more stringent conditions, namely the Kolmogorov axioms, that must be satisfied.
+
+3. $$\mu\left( \Omega \right) = 1 $$.
+4. $$\mu\left( \Omega \right) \in \left[ 0, 1 \right] $$.
+5. $$\mathcal{A} \subset \mathcal{B} \implies \mu\left( \mathcal{A} \right) \leq \mu\left( \mathcal{B} \right) $$.

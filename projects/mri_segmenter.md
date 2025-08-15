@@ -58,7 +58,7 @@ Clone the repo, then run
 ```python
 pip install requirements.txt
 ```
-and the install torch from the website https://pytorch.org/get-started/locally/.
+and the install torch from the official PyTorch <a href="https://pytorch.org/get-started/locally/">website</a>.
 
 The data folder should be formatted as:
 ```pgsql
