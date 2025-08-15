@@ -34,7 +34,7 @@ $$
 By the closed under complement condition,
 
 $$
-\Omega \ \bigcup _i \mathcal{A}_i \in \mathcal{F}
+\Omega \backslash \bigcup _i \mathcal{A}_i \in \mathcal{F}
 $$
 
 By De Morgan's Law,
@@ -43,7 +43,7 @@ $$
 \bigcap _i \left( \Omega \backslash \mathcal{A}_i \right) \in \mathcal{F}
 $$
 
-Let $\mathcal{B}_i \equiv \Omega \backslasn \mathcal{A}_i$, and apply the closed under complement condition,
+Let $\mathcal{B}_i \equiv \Omega \backslash \mathcal{A}_i$, and apply the closed under complement condition,
 
 $$
 \mathcal{A}_i \in \mathcal{F} \implies \mathcal{B}_i \in \mathcal{F},\\
@@ -105,7 +105,7 @@ $$
 \varphi = \sum _{i = 1}^n a_i \mathbb{1}_{\mathcal{A}_i}\left( x \right),
 $$
 
-where $a_i \geq 0$ and $mathcal{A}_i \in \mathcal{F}$ are disjoint sets that span the sample space and $\mathbb{1}_{\mathcal{A}_i}(\dot)$ is the indicator function for the set $\mathcal{A}_i$.
+where $a_i \geq 0$ and $\mathcal{A}_i \in \mathcal{F}$ are disjoint sets that span the sample space and $\mathbb{1}_{\mathcal{A}_i}(\dot)$ is the indicator function for the set $\mathcal{A}_i$.
 Following this concept, we define its integral as,
 
 $$
