@@ -66,7 +66,7 @@ $$
    \end{cases}.
 $$
 
-In the case where we do indeed care about permutations, we get $\mathcal{F} = \left\{ TT, TH, HT, HH \right\}$, which is called the Borel $\sigma$-algebra, defined to be the smallest σ-algebra containing all open sets of $\Omega$.
+In the case where we do indeed care about permutations, we get $\mathcal{F} = \{ TT, TH, HT, HH \}$, which is called the Borel $\sigma$-algebra, defined to be the smallest σ-algebra containing all open sets of $\Omega$.
 
 ## What is a measure?
 
@@ -105,9 +105,7 @@ $$
 \varphi = \sum _{i = 1}^n a_i \mathbb{1}_{\mathcal{A}_i}\left( x \right),
 $$
 
-where $a_i \geq 0$ and
-$\mathcal{A}_i \in \mathcal{F}$ are disjoint sets that span the sample space and 
-$\mathbb{1}_{\mathcal{A}_i}(\dot)$ is the indicator function for the set $\mathcal{A}_i$.
+where $a_i \geq 0$ and $\mathcal{A}_i \in \mathcal{F}$ are disjoint sets that span the sample space and $\mathbb{1}_{\mathcal{A}_i}(\cdot)$ is the indicator function for the set $\mathcal{A}_i$.
 Following this concept, we define its integral as,
 
 $$
