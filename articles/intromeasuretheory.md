@@ -112,7 +112,7 @@ $$
 \int _\mathcal{A} \varphi \mathrm{d} \mu = \sum _{i = 1}^n a_i \mu\left( \mathcal{A}_i \right) 
 $$
 
-such that $\left{ \mathcal{A}_i \right}$ are disjoint and $\bigcup _i \mathcal{A}_i = \mathcal{A}$.
+such that $\{ \mathcal{A}_i \}$ are disjoint and $\bigcup _i \mathcal{A}_i = \mathcal{A}$.
 
 N.B. *Every* measurable, non-negative function can be approximated by simple functions. There is a subtle point in the non-negativity that relates back to the previous bounded infinity, which we dive into next.
 
