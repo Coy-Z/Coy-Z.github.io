@@ -60,7 +60,7 @@ struct vector_scalar {
 ~~~
 The projection works as per the diagram shown below. We store the reciprocal of z so to determine the distance of the point from the origin. Later, we will compare the reciprocal of z to determine whether to display a pixel or not. r1 represents the coordinates on the projected screen.
 
-<img src="/files/perspective.png" alt="" width="400" height="200">
+<img src="/files/donut_perspective.png" alt="" width="400" height="200">
 ~~~cpp
 // Define projection function
 vector_scalar point_projection(double x, double y, double z) {
